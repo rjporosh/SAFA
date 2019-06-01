@@ -36,9 +36,9 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title">
+                        <a href="./index.html" class="site_title">
                             <!-- <i class="fa fa-paw"></i>  -->
-                            <img src="images/safa.png" style="width:45px;height:45px;border-radius: 50%">
+                            <img src="~/images/safa.png" style="width:45px;height:45px;border-radius: 50%">
                             <span>Safa Baitul Maal</span>
                         </a>
                     </div>
@@ -49,15 +49,23 @@
                         <div class="menu_section">
                             <!-- <h3>General</h3> -->
                             <ul class="nav side-menu">
-                                <li><a href="index.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a></li>
-
+                                @*<li><a href="index.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a></li>*@
+                                <li>
+                                    @Html.ActionLink("Test", "Index", "Test", new { @class = "elements" }, null)
+                                </li>
                                 <li>
                                     <a><i class="fa fa-user" aria-hidden="true"></i> Master Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="religious_fund.html">Religious Fund</a></li>
-                                        <li><a href="charitable_fund.html">Charitable Fund</a></li>
-                                        <li><a href="id_proof.html">ID Proofs</a></li>
-                                        <li><a href="invert.html">Inverts</a></li>
+                                        @*<li><a href="religious_fund.html">Religious Fund</a></li>*@
+                                        <li>
+                                            @Html.ActionLink("Religious", "add_religious_fund", "Religious", new { @class = "elements" }, null)
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Charitable", "charitable_fund", "Charitable", new { @class = "elements" }, null)
+                                        </li>
+                                        @*<li><a href="charitable_fund.html">Charitable Fund</a></li>*@
+                                        <li><a href="../id/id_proof">ID Proofs</a></li>
+                                        <li><a href="../inverts/inverts">Inverts</a></li>
                                         <li><a href="paymentType.html">Payment Types</a></li>
                                         <li><a href="branch_location.html">Branch-Location</a></li>
                                         <li><a href="bank_branch.html">Bank-Branch</a></li>
@@ -155,7 +163,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/safa.png" alt="">John Doe
+                                    <img src="~/images/safa.png" alt="">John Doe
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">

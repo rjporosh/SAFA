@@ -6,14 +6,14 @@ using System.Web.Mvc;
 
 namespace SAFA.Controllers
 {
-    public class CharitableController : Controller
+    public class IDController : Controller
     {
-        // GET: Charitable
-        public ActionResult add_charitable_fund()
+        // GET: ID
+        public ActionResult id_proof()
         {
             return View();
         }
-        public ActionResult charitable_fund()
+        public ActionResult add_id_proof()
         {
             return View();
         }

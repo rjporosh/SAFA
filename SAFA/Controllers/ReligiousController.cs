@@ -27,7 +27,10 @@ namespace SAFA.Controllers
         {
             return View();
         }
-
+        public ActionResult religious_fund()
+        {
+            return View();
+        }
         [HttpPost]
 
         public JsonResult Create( ReligiousFundVM vmObj)
