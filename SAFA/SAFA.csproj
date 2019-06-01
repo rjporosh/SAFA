@@ -154,12 +154,22 @@
     <Content Include="docs\js\shCore.js" />
     <Content Include="Global.asax" />
     <Content Include="images\american-express.png" />
+    <Content Include="images\back_disabled.png" />
+    <Content Include="images\back_enabled.png" />
+    <Content Include="images\back_enabled_hover.png" />
     <Content Include="images\cropper.jpg" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\forward_disabled.png" />
+    <Content Include="images\forward_enabled.png" />
+    <Content Include="images\forward_enabled_hover.png" />
     <Content Include="images\img.jpg" />
     <Content Include="images\inbox.png" />
+    <Content Include="images\layout.png" />
+    <Content Include="images\loading.gif" />
     <Content Include="images\mastercard.png" />
     <Content Include="images\media.jpg" />
+    <Content Include="images\min_menu.png" />
+    <Content Include="images\min_menu.tiff" />
     <Content Include="images\paypal.png" />
     <Content Include="images\picture.jpg" />
     <Content Include="images\prod-1.jpg" />
@@ -170,6 +180,8 @@
     <Content Include="images\safa.png" />
     <Content Include="images\user.png" />
     <Content Include="images\visa.png" />
+    <Content Include="images\welcome.png" />
+    <Content Include="images\welcome.tiff" />
     <Content Include="Models\DBEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DBEntity.edmx</DependentUpon>
@@ -4653,14 +4665,13 @@
     <Content Include="vendors\validator\README.md" />
     <Content Include="vendors\validator\validator.jquery.json" />
     <Content Include="Views\Test\Index.cshtml" />
-    <Content Include="Views\Religious\Create.cshtml" />
-    <Content Include="Views\Religious\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Auth\CustomPrincipal.cs" />
     <Compile Include="Auth\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Auth\ICustomPrincipal.cs" />
+    <Compile Include="Controllers\CharitableController.cs" />
     <Compile Include="Controllers\ReligiousController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -4843,6 +4854,13 @@
     </Content>
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Religious\add_religion.cshtml" />
+    <Content Include="Views\Religious\add_religious_fund.cshtml" />
+    <Content Include="Views\Charitable\add_charitable_fund.cshtml" />
+    <Content Include="Views\Test\inbox.cshtml" />
+    <Content Include="Views\Test\Index2.cshtml" />
+    <Content Include="Views\Test\Index3.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

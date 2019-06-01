@@ -9,11 +9,23 @@ namespace SAFA.Controllers
     public class TestController : Controller
     {
         // GET: Test
+        public ActionResult inbox()
+        {
+            return View();
+        }
+        public ActionResult index()
+        {
+            return View();
+        }
         public ActionResult add_application_type()
         {
             return View();
         }
-        public ActionResult Index()
+        public ActionResult Index3()
+        {
+            return View();
+        }
+        public ActionResult Index2()
         {
             return View();
         }

@@ -23,11 +23,14 @@ namespace SAFA.Controllers
 
         string message = "";
         bool status = false;
-
+        public ActionResult add_religion()
+        {
+            return View();
+        }
 
         [HttpPost]
 
-        public JsonResult Create([Bind(Exclude = "ReligiousFundTypeId")] ReligiousFundVM vmObj)
+        public JsonResult Create( ReligiousFundVM vmObj)
         {
 
          //   vmObj.CreatedBy = "porosh";
@@ -74,13 +77,10 @@ namespace SAFA.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult add_religious_fund()
         {
-
-
             return View();
         }
-
 
         public JsonResult GetByAjax()
         {
