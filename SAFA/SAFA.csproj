@@ -133,6 +133,7 @@
     <Content Include="Content\jquery-jvectormap-2.0.3.css" />
     <Content Include="Content\nprogress.css" />
     <Content Include="Content\prettify.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="docs\css\animate.min.css" />
     <Content Include="docs\css\bootstrap.min.css" />
     <Content Include="docs\css\docs.min.css" />
@@ -152,6 +153,7 @@
     <Content Include="docs\js\jquery.min.js" />
     <Content Include="docs\js\shBrushXml.js" />
     <Content Include="docs\js\shCore.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\american-express.png" />
     <Content Include="images\back_disabled.png" />
@@ -254,6 +256,13 @@
     <Content Include="docs\fonts\scss\_spinning.scss" />
     <Content Include="docs\fonts\scss\_stacked.scss" />
     <Content Include="docs\fonts\scss\_variables.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\fastclick.js" />
     <Content Include="Scripts\icheck.min.js" />
@@ -265,6 +274,12 @@
     <Content Include="Scripts\jquery.hotkeys.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.tagsinput.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\nprogress.js" />
     <Content Include="Scripts\parsley.min.js" />
@@ -4671,11 +4686,13 @@
     <Compile Include="Auth\CustomPrincipal.cs" />
     <Compile Include="Auth\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Auth\ICustomPrincipal.cs" />
+    <Compile Include="Controllers\AdministratorsController.cs" />
     <Compile Include="Controllers\CharitableController.cs" />
     <Compile Include="Controllers\IDController.cs" />
     <Compile Include="Controllers\InvertsController.cs" />
     <Compile Include="Controllers\ReligiousController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\tryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4832,6 +4849,7 @@
     <Compile Include="Models\UniversityType.cs">
       <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\BankBranchVM.cs" />
     <Compile Include="Models\ViewModel\ReligiousFundVM.cs" />
     <Compile Include="Models\WaterConnection.cs">
       <DependentUpon>DBEntity.tt</DependentUpon>
@@ -4868,6 +4886,16 @@
     <Content Include="Views\ID\id_proof.cshtml" />
     <Content Include="Views\ID\add_id_proof.cshtml" />
     <Content Include="Views\Inverts\Inverts.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\try\Index.cshtml" />
+    <Content Include="Views\try\Create.cshtml" />
+    <Content Include="Views\Administrators\Create.cshtml" />
+    <Content Include="Views\Administrators\Delete.cshtml" />
+    <Content Include="Views\Administrators\Details.cshtml" />
+    <Content Include="Views\Administrators\Edit.cshtml" />
+    <Content Include="Views\Administrators\Index.cshtml" />
+    <Content Include="Views\ID\edit_id_proof.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
