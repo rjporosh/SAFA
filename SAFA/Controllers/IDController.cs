@@ -14,6 +14,8 @@ namespace SAFA.Controllers
         public IDController() {
             db = new SBMDBEntities();
         }
+        string message = "";
+        bool status = false;
         // GET: ID
         public ActionResult id_proof()
         {
@@ -24,14 +26,23 @@ namespace SAFA.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult add_id_proof(IdProofType idProofType)
+        public JsonResult add_id_proof(IdProofType idProofType)
         {
-            idProofType.CreatedDate = DateTime.Now;
-            idProofType.UpdatedDate = DateTime.Now;
-            idProofType.IsActive = true;
-            db.IdProofTypes.Add(idProofType);
-            db.SaveChanges();
-            return View("id_proof");
+          
+            
+            if(ModelState.IsValid)
+            {
+                idProofType.CreatedDate = DateTime.Now;
+                idProofType.UpdatedDate = DateTime.Now;
+                idProofType.IsActive = true;
+                db.IdProofTypes.Add(idProofType);
+                db.SaveChanges();
+                    message = "Succesfully Saved";
+              
+            }
+            //isSaved.db.IdProofTypes.Add(idProofType);
+           // return new JavaScriptResult { Script = "alert('Successfully registered');" };
+            return new JsonResult { Data = new { message = message } };
         }
         public ActionResult edit_id_proof()
         {

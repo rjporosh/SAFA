@@ -9,6 +9,14 @@ namespace SAFA.Controllers
     public class TestController : Controller
     {
         // GET: Test
+        public ActionResult form()
+        {
+            return View();
+        }
+        public ActionResult form_advanced()
+        {
+            return View();
+        }
         public ActionResult inbox()
         {
             return View();

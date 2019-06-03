@@ -4896,6 +4896,8 @@
     <Content Include="Views\Administrators\Edit.cshtml" />
     <Content Include="Views\Administrators\Index.cshtml" />
     <Content Include="Views\ID\edit_id_proof.cshtml" />
+    <Content Include="Views\Test\form.cshtml" />
+    <Content Include="Views\Test\form_advanced.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
