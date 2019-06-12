@@ -19,11 +19,15 @@ namespace SAFA
             Mapper.Initialize(configaration =>
             {
 
-                // For GeneralCategory
+                // For ReligiousFundType
 
                 configaration.CreateMap<ReligiousFundType, ReligiousFundVM>();
                 configaration.CreateMap<ReligiousFundVM, ReligiousFundType>();
 
+                // For Religion
+
+                configaration.CreateMap<Religion, ReligionVM>();
+                configaration.CreateMap<ReligionVM, Religion>();
             });
         }
     }

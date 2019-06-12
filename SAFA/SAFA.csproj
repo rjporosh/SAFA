@@ -194,6 +194,7 @@
       <DependentUpon>DBEntity.edmx</DependentUpon>
       <LastGenOutput>DBEntity.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\add_religion.js" />
     <Content Include="Scripts\autosize.min.js" />
     <Content Include="Scripts\bootstrap-progressbar.min.js" />
     <Content Include="Scripts\bootstrap-wysiwyg.min.js" />
@@ -4850,6 +4851,7 @@
       <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModel\BankBranchVM.cs" />
+    <Compile Include="Models\ViewModel\ReligionVM.cs" />
     <Compile Include="Models\ViewModel\ReligiousFundVM.cs" />
     <Compile Include="Models\WaterConnection.cs">
       <DependentUpon>DBEntity.tt</DependentUpon>
@@ -4860,6 +4862,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepo\IRepository.cs" />
     <Compile Include="Repository\BaseRepo\Repository.cs" />
+    <Compile Include="Repository\IReligionRepository.cs" />
     <Compile Include="Repository\IReligiousFundRepository.cs" />
   </ItemGroup>
   <ItemGroup>

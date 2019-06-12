@@ -15,10 +15,12 @@ namespace SAFA.Controllers
         // GET: Religious
         
         private ReligiousFundRepository _Manager;
+        private ReligionRepository _Manager1;
 
         public ReligiousController()
         {
             _Manager = new ReligiousFundRepository();
+            _Manager1 = new ReligionRepository();
         }
 
         string message = "";
@@ -30,6 +32,50 @@ namespace SAFA.Controllers
         public ActionResult religious_fund()
         {
             return View();
+        }
+        [HttpPost]
+
+        public JsonResult add_religion(ReligionVM vmObj)
+        {
+            vmObj.CreatedBy = 1;
+            vmObj.CreatedDate = DateTime.Now;
+            vmObj.UpdatedBy = 1;
+            vmObj.UpdatedDate = DateTime.Now;
+
+
+            int isSaved = 0;
+
+            if (ModelState.IsValid)
+            {
+
+
+                var result = Mapper.Map<Religion>(vmObj);
+
+                result.IsActive = true;
+
+                isSaved = _Manager1.Add(result);
+                if (isSaved > 0)
+                {
+                    status = true;
+                    message = "Succesfully Saved";
+                }
+                else
+                {
+                    status = true;
+                    message = "Error! Please try again.";
+                }
+
+                return new JsonResult { Data = new { status = status, message = message } };
+            }
+
+            else
+            {
+                status = false;
+                message = "Bank Allready Exsists !!!";
+                return new JsonResult { Data = new { status = status, message = message } };
+            }
+
+
         }
         [HttpPost]
 

@@ -18,13 +18,13 @@ namespace DealerManagementSoftware.Repository.BaseRepo
        public SBMDBEntities db = new SBMDBEntities();
         public int Add(T entity)
         {
-            var addBy = entity.GetType().GetProperty("AddedBy");
-            var addDate= entity.GetType().GetProperty("AddedDate");
-            var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            string[] current = (identity.Identity.Name).Split('&');
+            //var addBy = entity.GetType().GetProperty("AddedBy");
+            //var addDate = entity.GetType().GetProperty("AddedDate");
+            //var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            //string[] current = (identity.Identity.Name).Split('&');
 
-            addBy.SetValue(entity, current[0], null);
-            addDate.SetValue(entity, DateTime.Now, null);
+            //addBy.SetValue(entity, current[0], null);
+            //addDate.SetValue(entity, DateTime.Now, null);
             db.Set<T>().Add(entity);
 
            return db.SaveChanges();
