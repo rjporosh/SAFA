@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="SBMDBModelStoreContainer" CdmEntityContainer="SBMDBEntities">
+  <EntityContainerMapping StorageEntityContainer="SBMDBModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="Administrators">
       <EntityTypeMapping TypeName="SBMDBModel.Administrator">
         <MappingFragment StoreEntitySet="Administrator">
@@ -331,6 +331,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PensionTypes">
+      <EntityTypeMapping TypeName="SBMDBModel.PensionType">
+        <MappingFragment StoreEntitySet="PensionType">
+          <ScalarProperty Name="PensionTypeId" ColumnName="PensionTypeId" />
+          <ScalarProperty Name="PensionTypeName" ColumnName="PensionTypeName" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Relationships">
       <EntityTypeMapping TypeName="SBMDBModel.Relationship">
         <MappingFragment StoreEntitySet="Relationship">
@@ -644,19 +657,6 @@
         <MappingFragment StoreEntitySet="GasCompany">
           <ScalarProperty Name="GasCompanyId" ColumnName="GasCompanyId" />
           <ScalarProperty Name="GasCompanyName" ColumnName="GasCompanyName" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PensionTypes">
-      <EntityTypeMapping TypeName="SBMDBModel.PensionType">
-        <MappingFragment StoreEntitySet="PensionType">
-          <ScalarProperty Name="PensionTypeId" ColumnName="PensionTypeId" />
-          <ScalarProperty Name="PensionTypeName" ColumnName="PensionTypeName" />
           <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />

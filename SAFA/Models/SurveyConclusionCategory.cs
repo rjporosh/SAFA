@@ -22,5 +22,8 @@ namespace SAFA.Models
         public System.DateTime CreatedDate { get; set; }
         public System.DateTime UpdatedDate { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
     }
 }

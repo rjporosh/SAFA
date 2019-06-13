@@ -26,5 +26,8 @@ namespace SAFA.Models
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<bool> IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
     }
 }

@@ -14,6 +14,14 @@ namespace SAFA.Models
     
     public partial class Country
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Country()
+        {
+            this.Cities = new HashSet<City>();
+            this.Cities1 = new HashSet<City>();
+            this.States = new HashSet<State>();
+        }
+    
         public int CountryId { get; set; }
         public string CountryName { get; set; }
         public System.DateTime CreatedDate { get; set; }
@@ -21,5 +29,14 @@ namespace SAFA.Models
         public System.DateTime UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<City> Cities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<City> Cities1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<State> States { get; set; }
     }
 }

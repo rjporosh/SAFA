@@ -11,6 +11,104 @@
     <Property Name="CreatedBy" Type="Int32" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Administrator_Administrator" FromRole="Administrator" ToRole="Administrator1" />
+    <NavigationProperty Name="Administrator2" Relationship="Self.FK_Administrator_Administrator" FromRole="Administrator1" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator11" Relationship="Self.FK_Administrator_Administrator1" FromRole="Administrator" ToRole="Administrator1" />
+    <NavigationProperty Name="Administrator3" Relationship="Self.FK_Administrator_Administrator1" FromRole="Administrator1" ToRole="Administrator" />
+    <NavigationProperty Name="ApplicationTypes" Relationship="Self.FK_ApplicationType_Administrator" FromRole="Administrator" ToRole="ApplicationType" />
+    <NavigationProperty Name="ApplicationTypes1" Relationship="Self.FK_ApplicationType_Administrator1" FromRole="Administrator" ToRole="ApplicationType" />
+    <NavigationProperty Name="BankBranches" Relationship="Self.FK_BankBranch_Administrator" FromRole="Administrator" ToRole="BankBranch" />
+    <NavigationProperty Name="BankBranches1" Relationship="Self.FK_BankBranch_Administrator1" FromRole="Administrator" ToRole="BankBranch" />
+    <NavigationProperty Name="BeneficiayAidStatus" Relationship="Self.FK_BeneficiayAidStatus_Administrator" FromRole="Administrator" ToRole="BeneficiayAidStatus" />
+    <NavigationProperty Name="BeneficiayAidStatus1" Relationship="Self.FK_BeneficiayAidStatus_Administrator1" FromRole="Administrator" ToRole="BeneficiayAidStatus" />
+    <NavigationProperty Name="BranchLocations" Relationship="Self.FK_BranchLocation_Administrator" FromRole="Administrator" ToRole="BranchLocation" />
+    <NavigationProperty Name="BranchLocations1" Relationship="Self.FK_BranchLocation_Administrator1" FromRole="Administrator" ToRole="BranchLocation" />
+    <NavigationProperty Name="CharitableFundTypes" Relationship="Self.FK_CharitableFundType_Administrator" FromRole="Administrator" ToRole="CharitableFundType" />
+    <NavigationProperty Name="CharitableFundTypes1" Relationship="Self.FK_CharitableFundType_Administrator1" FromRole="Administrator" ToRole="CharitableFundType" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK_City_Administrator" FromRole="Administrator" ToRole="City" />
+    <NavigationProperty Name="Cities1" Relationship="Self.FK_City_Administrator1" FromRole="Administrator" ToRole="City" />
+    <NavigationProperty Name="CollegeDegreeLevels" Relationship="Self.FK_CollegeDegreeLevel_Administrator" FromRole="Administrator" ToRole="CollegeDegreeLevel" />
+    <NavigationProperty Name="CollegeDegreeLevels1" Relationship="Self.FK_CollegeDegreeLevel_Administrator1" FromRole="Administrator" ToRole="CollegeDegreeLevel" />
+    <NavigationProperty Name="CollegeTypes" Relationship="Self.FK_CollegeType_Administrator" FromRole="Administrator" ToRole="CollegeType" />
+    <NavigationProperty Name="CollegeTypes1" Relationship="Self.FK_CollegeType_Administrator1" FromRole="Administrator" ToRole="CollegeType" />
+    <NavigationProperty Name="Countries" Relationship="Self.FK_Country_Administrator" FromRole="Administrator" ToRole="Country" />
+    <NavigationProperty Name="Countries1" Relationship="Self.FK_Country_Administrator1" FromRole="Administrator" ToRole="Country" />
+    <NavigationProperty Name="DistitutionTypes" Relationship="Self.FK_DistitutionType_Administrator" FromRole="Administrator" ToRole="DistitutionType" />
+    <NavigationProperty Name="DistitutionTypes1" Relationship="Self.FK_DistitutionType_Administrator1" FromRole="Administrator" ToRole="DistitutionType" />
+    <NavigationProperty Name="EducationLevels" Relationship="Self.FK_EducationLevel_Administrator" FromRole="Administrator" ToRole="EducationLevel" />
+    <NavigationProperty Name="EducationLevels1" Relationship="Self.FK_EducationLevel_Administrator1" FromRole="Administrator" ToRole="EducationLevel" />
+    <NavigationProperty Name="EducationTypes" Relationship="Self.FK_EducationType_Administrator" FromRole="Administrator" ToRole="EducationType" />
+    <NavigationProperty Name="EducationTypes1" Relationship="Self.FK_EducationType_Administrator1" FromRole="Administrator" ToRole="EducationType" />
+    <NavigationProperty Name="EmailSettings" Relationship="Self.FK_EmailSettings_Administrator" FromRole="Administrator" ToRole="EmailSettings" />
+    <NavigationProperty Name="EmailSettings1" Relationship="Self.FK_EmailSettings_Administrator1" FromRole="Administrator" ToRole="EmailSettings" />
+    <NavigationProperty Name="EmailTemplates" Relationship="Self.FK_EmailTemplate_Administrator" FromRole="Administrator" ToRole="EmailTemplate" />
+    <NavigationProperty Name="EmailTemplates1" Relationship="Self.FK_EmailTemplate_Administrator1" FromRole="Administrator" ToRole="EmailTemplate" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Administrator" FromRole="Administrator" ToRole="Employee" />
+    <NavigationProperty Name="Employees1" Relationship="Self.FK_Employee_Administrator1" FromRole="Administrator" ToRole="Employee" />
+    <NavigationProperty Name="GasCompanies" Relationship="Self.FK_GasCompany_Administrator" FromRole="Administrator" ToRole="GasCompany" />
+    <NavigationProperty Name="GasCompanies1" Relationship="Self.FK_GasCompany_Administrator1" FromRole="Administrator" ToRole="GasCompany" />
+    <NavigationProperty Name="Genders" Relationship="Self.FK_Gender_Administrator" FromRole="Administrator" ToRole="Gender" />
+    <NavigationProperty Name="Genders1" Relationship="Self.FK_Gender_Administrator1" FromRole="Administrator" ToRole="Gender" />
+    <NavigationProperty Name="HouseTypes" Relationship="Self.FK_HouseType_Administrator" FromRole="Administrator" ToRole="HouseType" />
+    <NavigationProperty Name="HouseTypes1" Relationship="Self.FK_HouseType_Administrator1" FromRole="Administrator" ToRole="HouseType" />
+    <NavigationProperty Name="IdProofTypes" Relationship="Self.FK_IdProofType_Administrator" FromRole="Administrator" ToRole="IdProofType" />
+    <NavigationProperty Name="IdProofTypes1" Relationship="Self.FK_IdProofType_Administrator1" FromRole="Administrator" ToRole="IdProofType" />
+    <NavigationProperty Name="InvertTypes" Relationship="Self.FK_InvertType_Administrator" FromRole="Administrator" ToRole="InvertType" />
+    <NavigationProperty Name="InvertTypes1" Relationship="Self.FK_InvertType_Administrator1" FromRole="Administrator" ToRole="InvertType" />
+    <NavigationProperty Name="LoginDetails" Relationship="Self.FK_LoginDetails_Administrator" FromRole="Administrator" ToRole="LoginDetails" />
+    <NavigationProperty Name="LoginDetails1" Relationship="Self.FK_LoginDetails_Administrator1" FromRole="Administrator" ToRole="LoginDetails" />
+    <NavigationProperty Name="MemberTypes" Relationship="Self.FK_MemberType_Administrator" FromRole="Administrator" ToRole="MemberType" />
+    <NavigationProperty Name="MemberTypes1" Relationship="Self.FK_MemberType_Administrator1" FromRole="Administrator" ToRole="MemberType" />
+    <NavigationProperty Name="Modules" Relationship="Self.FK_Module_Administrator" FromRole="Administrator" ToRole="Module" />
+    <NavigationProperty Name="Modules1" Relationship="Self.FK_Module_Administrator1" FromRole="Administrator" ToRole="Module" />
+    <NavigationProperty Name="PaymentModes" Relationship="Self.FK_PaymentMode_Administrator" FromRole="Administrator" ToRole="PaymentMode" />
+    <NavigationProperty Name="PaymentModes1" Relationship="Self.FK_PaymentMode_Administrator1" FromRole="Administrator" ToRole="PaymentMode" />
+    <NavigationProperty Name="PaymentTypes" Relationship="Self.FK_PaymentType_Administrator" FromRole="Administrator" ToRole="PaymentType" />
+    <NavigationProperty Name="PaymentTypes1" Relationship="Self.FK_PaymentType_Administrator1" FromRole="Administrator" ToRole="PaymentType" />
+    <NavigationProperty Name="PensionTypes" Relationship="Self.FK_PensionType_Administrator2" FromRole="Administrator" ToRole="PensionType" />
+    <NavigationProperty Name="PensionTypes1" Relationship="Self.FK_PensionType_Administrator3" FromRole="Administrator" ToRole="PensionType" />
+    <NavigationProperty Name="Relationships" Relationship="Self.FK_Relationship_Administrator" FromRole="Administrator" ToRole="Relationship" />
+    <NavigationProperty Name="Relationships1" Relationship="Self.FK_Relationship_Administrator1" FromRole="Administrator" ToRole="Relationship" />
+    <NavigationProperty Name="Religions" Relationship="Self.FK_Religion_Administrator" FromRole="Administrator" ToRole="Religion" />
+    <NavigationProperty Name="Religions1" Relationship="Self.FK_Religion_Administrator1" FromRole="Administrator" ToRole="Religion" />
+    <NavigationProperty Name="ReligiousFundTypes" Relationship="Self.FK_ReligiousFundType_Administrator" FromRole="Administrator" ToRole="ReligiousFundType" />
+    <NavigationProperty Name="ReligiousFundTypes1" Relationship="Self.FK_ReligiousFundType_Administrator1" FromRole="Administrator" ToRole="ReligiousFundType" />
+    <NavigationProperty Name="ResidentTypes" Relationship="Self.FK_ResidentType_Administrator" FromRole="Administrator" ToRole="ResidentType" />
+    <NavigationProperty Name="ResidentTypes1" Relationship="Self.FK_ResidentType_Administrator1" FromRole="Administrator" ToRole="ResidentType" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Role_Administrator" FromRole="Administrator" ToRole="Role" />
+    <NavigationProperty Name="Roles1" Relationship="Self.FK_Role_Administrator1" FromRole="Administrator" ToRole="Role" />
+    <NavigationProperty Name="RoleAssignments" Relationship="Self.FK_RoleAssignment_Administrator" FromRole="Administrator" ToRole="RoleAssignment" />
+    <NavigationProperty Name="RoleAssignments1" Relationship="Self.FK_RoleAssignment_Administrator1" FromRole="Administrator" ToRole="RoleAssignment" />
+    <NavigationProperty Name="SchoolClassLevels" Relationship="Self.FK_SchoolClassLevel_Administrator" FromRole="Administrator" ToRole="SchoolClassLevel" />
+    <NavigationProperty Name="SchoolClassLevels1" Relationship="Self.FK_SchoolClassLevel_Administrator1" FromRole="Administrator" ToRole="SchoolClassLevel" />
+    <NavigationProperty Name="SchoolTypes" Relationship="Self.FK_SchoolType_Administrator" FromRole="Administrator" ToRole="SchoolType" />
+    <NavigationProperty Name="SchoolTypes1" Relationship="Self.FK_SchoolType_Administrator1" FromRole="Administrator" ToRole="SchoolType" />
+    <NavigationProperty Name="SMSSettings" Relationship="Self.FK_SMSSettings_Administrator" FromRole="Administrator" ToRole="SMSSettings" />
+    <NavigationProperty Name="SMSSettings1" Relationship="Self.FK_SMSSettings_Administrator1" FromRole="Administrator" ToRole="SMSSettings" />
+    <NavigationProperty Name="SMSTemplates" Relationship="Self.FK_SMSTemplate_Administrator" FromRole="Administrator" ToRole="SMSTemplate" />
+    <NavigationProperty Name="SMSTemplates1" Relationship="Self.FK_SMSTemplate_Administrator1" FromRole="Administrator" ToRole="SMSTemplate" />
+    <NavigationProperty Name="States" Relationship="Self.FK_State_Administrator" FromRole="Administrator" ToRole="State" />
+    <NavigationProperty Name="States1" Relationship="Self.FK_State_Administrator1" FromRole="Administrator" ToRole="State" />
+    <NavigationProperty Name="SurveyAreaCodes" Relationship="Self.FK_SurveyAreaCode_Administrator" FromRole="Administrator" ToRole="SurveyAreaCode" />
+    <NavigationProperty Name="SurveyAreaCodes1" Relationship="Self.FK_SurveyAreaCode_Administrator1" FromRole="Administrator" ToRole="SurveyAreaCode" />
+    <NavigationProperty Name="SurveyConclusionCategories" Relationship="Self.FK_SurveyConclusionCategory_Administrator" FromRole="Administrator" ToRole="SurveyConclusionCategory" />
+    <NavigationProperty Name="SurveyConclusionCategories1" Relationship="Self.FK_SurveyConclusionCategory_Administrator1" FromRole="Administrator" ToRole="SurveyConclusionCategory" />
+    <NavigationProperty Name="SurveyConcusionQuestions" Relationship="Self.FK_SurveyConcusionQuestion_Administrator" FromRole="Administrator" ToRole="SurveyConcusionQuestion" />
+    <NavigationProperty Name="SurveyConcusionQuestions1" Relationship="Self.FK_SurveyConcusionQuestion_Administrator1" FromRole="Administrator" ToRole="SurveyConcusionQuestion" />
+    <NavigationProperty Name="SurveyStatus" Relationship="Self.FK_SurveyStatus_Administrator" FromRole="Administrator" ToRole="SurveyStatus" />
+    <NavigationProperty Name="SurveyStatus1" Relationship="Self.FK_SurveyStatus_Administrator1" FromRole="Administrator" ToRole="SurveyStatus" />
+    <NavigationProperty Name="SurveyTypes" Relationship="Self.FK_SurveyType_Administrator" FromRole="Administrator" ToRole="SurveyType" />
+    <NavigationProperty Name="SurveyTypes1" Relationship="Self.FK_SurveyType_Administrator1" FromRole="Administrator" ToRole="SurveyType" />
+    <NavigationProperty Name="ToiletTypes" Relationship="Self.FK_ToiletType_Administrator" FromRole="Administrator" ToRole="ToiletType" />
+    <NavigationProperty Name="ToiletTypes1" Relationship="Self.FK_ToiletType_Administrator1" FromRole="Administrator" ToRole="ToiletType" />
+    <NavigationProperty Name="TrustTypes" Relationship="Self.FK_TrustType_Administrator" FromRole="Administrator" ToRole="TrustType" />
+    <NavigationProperty Name="TrustTypes1" Relationship="Self.FK_TrustType_Administrator1" FromRole="Administrator" ToRole="TrustType" />
+    <NavigationProperty Name="UniversityTypes" Relationship="Self.FK_UniversityType_Administrator" FromRole="Administrator" ToRole="UniversityType" />
+    <NavigationProperty Name="UniversityTypes1" Relationship="Self.FK_UniversityType_Administrator1" FromRole="Administrator" ToRole="UniversityType" />
+    <NavigationProperty Name="WaterConnections" Relationship="Self.FK_WaterConnection_Administrator" FromRole="Administrator" ToRole="WaterConnection" />
+    <NavigationProperty Name="WaterConnections1" Relationship="Self.FK_WaterConnection_Administrator1" FromRole="Administrator" ToRole="WaterConnection" />
+    <NavigationProperty Name="WorkTypes" Relationship="Self.FK_WorkType_Administrator" FromRole="Administrator" ToRole="WorkType" />
+    <NavigationProperty Name="WorkTypes1" Relationship="Self.FK_WorkType_Administrator1" FromRole="Administrator" ToRole="WorkType" />
   </EntityType>
   <EntityType Name="ApplicationType">
     <Key>
@@ -23,6 +121,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_ApplicationType_Administrator" FromRole="ApplicationType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_ApplicationType_Administrator1" FromRole="ApplicationType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="BankBranch">
     <Key>
@@ -36,6 +136,9 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_BankBranch_Administrator" FromRole="BankBranch" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_BankBranch_Administrator1" FromRole="BankBranch" ToRole="Administrator" />
+    <NavigationProperty Name="BranchLocation" Relationship="Self.FK_BankBranch_BranchLocation" FromRole="BankBranch" ToRole="BranchLocation" />
   </EntityType>
   <EntityType Name="BeneficiayAidStatu">
     <Key>
@@ -48,6 +151,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_BeneficiayAidStatus_Administrator" FromRole="BeneficiayAidStatus" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_BeneficiayAidStatus_Administrator1" FromRole="BeneficiayAidStatus" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="BranchLocation">
     <Key>
@@ -61,6 +166,11 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_BranchLocation_Administrator" FromRole="BranchLocation" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_BranchLocation_Administrator1" FromRole="BranchLocation" ToRole="Administrator" />
+    <NavigationProperty Name="BankBranches" Relationship="Self.FK_BankBranch_BranchLocation" FromRole="BranchLocation" ToRole="BankBranch" />
+    <NavigationProperty Name="TrustType" Relationship="Self.FK_BranchLocation_TrustType" FromRole="BranchLocation" ToRole="TrustType" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_BranchLocation" FromRole="BranchLocation" ToRole="Employee" />
   </EntityType>
   <EntityType Name="CharitableFundType">
     <Key>
@@ -73,6 +183,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_CharitableFundType_Administrator" FromRole="CharitableFundType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_CharitableFundType_Administrator1" FromRole="CharitableFundType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="City">
     <Key>
@@ -80,13 +192,17 @@
     </Key>
     <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CityinName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="StateId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CountryId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
     <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="CreatedBy" Type="Int32" />
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_City_Administrator" FromRole="City" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_City_Administrator1" FromRole="City" ToRole="Administrator" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_City_Country" FromRole="City" ToRole="Country" />
+    <NavigationProperty Name="Country1" Relationship="Self.FK_City_Country1" FromRole="City" ToRole="Country" />
   </EntityType>
   <EntityType Name="CollegeType">
     <Key>
@@ -99,6 +215,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_CollegeType_Administrator" FromRole="CollegeType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_CollegeType_Administrator1" FromRole="CollegeType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Country">
     <Key>
@@ -111,6 +229,11 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Country_Administrator" FromRole="Country" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Country_Administrator1" FromRole="Country" ToRole="Administrator" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK_City_Country" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="Cities1" Relationship="Self.FK_City_Country1" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="States" Relationship="Self.FK_State_Country" FromRole="Country" ToRole="State" />
   </EntityType>
   <EntityType Name="DistitutionType">
     <Key>
@@ -123,6 +246,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_DistitutionType_Administrator" FromRole="DistitutionType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_DistitutionType_Administrator1" FromRole="DistitutionType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="EducationLevel">
     <Key>
@@ -135,6 +260,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_EducationLevel_Administrator" FromRole="EducationLevel" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_EducationLevel_Administrator1" FromRole="EducationLevel" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="EducationType">
     <Key>
@@ -147,6 +274,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_EducationType_Administrator" FromRole="EducationType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_EducationType_Administrator1" FromRole="EducationType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="EmailSetting">
     <Key>
@@ -163,6 +292,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_EmailSettings_Administrator" FromRole="EmailSettings" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_EmailSettings_Administrator1" FromRole="EmailSettings" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="EmailTemplate">
     <Key>
@@ -177,6 +308,8 @@
     <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_EmailTemplate_Administrator" FromRole="EmailTemplate" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_EmailTemplate_Administrator1" FromRole="EmailTemplate" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Employee">
     <Key>
@@ -191,6 +324,10 @@
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Employee_Administrator" FromRole="Employee" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Employee_Administrator1" FromRole="Employee" ToRole="Administrator" />
+    <NavigationProperty Name="BranchLocation" Relationship="Self.FK_Employee_BranchLocation" FromRole="Employee" ToRole="BranchLocation" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Employee_Role" FromRole="Employee" ToRole="Role" />
   </EntityType>
   <EntityType Name="Gender">
     <Key>
@@ -203,6 +340,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Gender_Administrator" FromRole="Gender" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Gender_Administrator1" FromRole="Gender" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="HouseType">
     <Key>
@@ -215,6 +354,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_HouseType_Administrator" FromRole="HouseType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_HouseType_Administrator1" FromRole="HouseType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="IdProofType">
     <Key>
@@ -227,6 +368,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_IdProofType_Administrator" FromRole="IdProofType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_IdProofType_Administrator1" FromRole="IdProofType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="InvertType">
     <Key>
@@ -239,6 +382,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_InvertType_Administrator" FromRole="InvertType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_InvertType_Administrator1" FromRole="InvertType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="LoginDetail">
     <Key>
@@ -256,6 +401,8 @@
     <Property Name="LastLoginUpdatedTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_LoginDetails_Administrator" FromRole="LoginDetails" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_LoginDetails_Administrator1" FromRole="LoginDetails" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="MemberType">
     <Key>
@@ -268,6 +415,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_MemberType_Administrator" FromRole="MemberType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_MemberType_Administrator1" FromRole="MemberType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Module">
     <Key>
@@ -281,6 +430,9 @@
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Module_Administrator" FromRole="Module" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Module_Administrator1" FromRole="Module" ToRole="Administrator" />
+    <NavigationProperty Name="RoleAssignments" Relationship="Self.FK_RoleAssignment_Module" FromRole="Module" ToRole="RoleAssignment" />
   </EntityType>
   <EntityType Name="PaymentMode">
     <Key>
@@ -293,6 +445,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_PaymentMode_Administrator" FromRole="PaymentMode" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_PaymentMode_Administrator1" FromRole="PaymentMode" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="PaymentType">
     <Key>
@@ -305,6 +459,22 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_PaymentType_Administrator" FromRole="PaymentType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_PaymentType_Administrator1" FromRole="PaymentType" ToRole="Administrator" />
+  </EntityType>
+  <EntityType Name="PensionType">
+    <Key>
+      <PropertyRef Name="PensionTypeId" />
+    </Key>
+    <Property Name="PensionTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PensionTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_PensionType_Administrator2" FromRole="PensionType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_PensionType_Administrator3" FromRole="PensionType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Relationship">
     <Key>
@@ -317,6 +487,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Relationship_Administrator" FromRole="Relationship" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Relationship_Administrator1" FromRole="Relationship" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Religion">
     <Key>
@@ -329,6 +501,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Religion_Administrator" FromRole="Religion" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Religion_Administrator1" FromRole="Religion" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="ReligiousFundType">
     <Key>
@@ -341,6 +515,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_ReligiousFundType_Administrator" FromRole="ReligiousFundType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_ReligiousFundType_Administrator1" FromRole="ReligiousFundType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="ResidentType">
     <Key>
@@ -353,6 +529,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_ResidentType_Administrator" FromRole="ResidentType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_ResidentType_Administrator1" FromRole="ResidentType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -366,6 +544,10 @@
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_Role_Administrator" FromRole="Role" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_Role_Administrator1" FromRole="Role" ToRole="Administrator" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Role" FromRole="Role" ToRole="Employee" />
+    <NavigationProperty Name="RoleAssignments" Relationship="Self.FK_RoleAssignment_Role" FromRole="Role" ToRole="RoleAssignment" />
   </EntityType>
   <EntityType Name="RoleAssignment">
     <Key>
@@ -381,6 +563,10 @@
     <Property Name="CreatedBy" Type="Int32" />
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_RoleAssignment_Administrator" FromRole="RoleAssignment" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_RoleAssignment_Administrator1" FromRole="RoleAssignment" ToRole="Administrator" />
+    <NavigationProperty Name="Module" Relationship="Self.FK_RoleAssignment_Module" FromRole="RoleAssignment" ToRole="Module" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_RoleAssignment_Role" FromRole="RoleAssignment" ToRole="Role" />
   </EntityType>
   <EntityType Name="SchoolClassLevel">
     <Key>
@@ -393,6 +579,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SchoolClassLevel_Administrator" FromRole="SchoolClassLevel" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SchoolClassLevel_Administrator1" FromRole="SchoolClassLevel" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SchoolType">
     <Key>
@@ -405,6 +593,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SchoolType_Administrator" FromRole="SchoolType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SchoolType_Administrator1" FromRole="SchoolType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SMSSetting">
     <Key>
@@ -421,6 +611,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SMSSettings_Administrator" FromRole="SMSSettings" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SMSSettings_Administrator1" FromRole="SMSSettings" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SMSTemplate">
     <Key>
@@ -435,6 +627,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SMSTemplate_Administrator" FromRole="SMSTemplate" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SMSTemplate_Administrator1" FromRole="SMSTemplate" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="State">
     <Key>
@@ -448,6 +642,9 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_State_Administrator" FromRole="State" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_State_Administrator1" FromRole="State" ToRole="Administrator" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_State_Country" FromRole="State" ToRole="Country" />
   </EntityType>
   <EntityType Name="SurveyAreaCode">
     <Key>
@@ -465,6 +662,8 @@
     <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SurveyAreaCode_Administrator" FromRole="SurveyAreaCode" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SurveyAreaCode_Administrator1" FromRole="SurveyAreaCode" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SurveyConclusionCategory">
     <Key>
@@ -478,6 +677,8 @@
     <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SurveyConclusionCategory_Administrator" FromRole="SurveyConclusionCategory" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SurveyConclusionCategory_Administrator1" FromRole="SurveyConclusionCategory" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SurveyConcusionQuestion">
     <Key>
@@ -495,6 +696,8 @@
     <Property Name="CreatedDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
     <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SurveyConcusionQuestion_Administrator" FromRole="SurveyConcusionQuestion" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SurveyConcusionQuestion_Administrator1" FromRole="SurveyConcusionQuestion" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SurveyStatu">
     <Key>
@@ -507,6 +710,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SurveyStatus_Administrator" FromRole="SurveyStatus" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SurveyStatus_Administrator1" FromRole="SurveyStatus" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="SurveyType">
     <Key>
@@ -519,6 +724,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_SurveyType_Administrator" FromRole="SurveyType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_SurveyType_Administrator1" FromRole="SurveyType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="ToiletType">
     <Key>
@@ -531,6 +738,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_ToiletType_Administrator" FromRole="ToiletType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_ToiletType_Administrator1" FromRole="ToiletType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="TrustType">
     <Key>
@@ -543,6 +752,9 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_TrustType_Administrator" FromRole="TrustType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_TrustType_Administrator1" FromRole="TrustType" ToRole="Administrator" />
+    <NavigationProperty Name="BranchLocations" Relationship="Self.FK_BranchLocation_TrustType" FromRole="TrustType" ToRole="BranchLocation" />
   </EntityType>
   <EntityType Name="UniversityType">
     <Key>
@@ -555,6 +767,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_UniversityType_Administrator" FromRole="UniversityType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_UniversityType_Administrator1" FromRole="UniversityType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="WaterConnection">
     <Key>
@@ -567,6 +781,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_WaterConnection_Administrator" FromRole="WaterConnection" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_WaterConnection_Administrator1" FromRole="WaterConnection" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="WorkType">
     <Key>
@@ -579,6 +795,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_WorkType_Administrator" FromRole="WorkType" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_WorkType_Administrator1" FromRole="WorkType" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="CollegeDegreeLevel">
     <Key>
@@ -593,6 +811,8 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_CollegeDegreeLevel_Administrator" FromRole="CollegeDegreeLevel" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_CollegeDegreeLevel_Administrator1" FromRole="CollegeDegreeLevel" ToRole="Administrator" />
   </EntityType>
   <EntityType Name="GasCompany">
     <Key>
@@ -607,22 +827,1270 @@
     <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UpdatedBy" Type="Int32" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Administrator" Relationship="Self.FK_GasCompany_Administrator" FromRole="GasCompany" ToRole="Administrator" />
+    <NavigationProperty Name="Administrator1" Relationship="Self.FK_GasCompany_Administrator1" FromRole="GasCompany" ToRole="Administrator" />
   </EntityType>
-  <EntityType Name="PensionType">
-    <Key>
-      <PropertyRef Name="CreatedDate" />
-      <PropertyRef Name="UpdatedDate" />
-      <PropertyRef Name="IsActive" />
-    </Key>
-    <Property Name="PensionTypeId" Type="Int32" />
-    <Property Name="PensionTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="CreatedBy" Type="Int32" />
-    <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UpdatedBy" Type="Int32" />
-    <Property Name="IsActive" Type="Boolean" Nullable="false" />
-  </EntityType>
-  <EntityContainer Name="SBMDBEntities" annotation:LazyLoadingEnabled="true">
+  <Association Name="FK_Administrator_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Administrator1" Type="Self.Administrator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Administrator1">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Administrator_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Administrator1" Type="Self.Administrator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Administrator1">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicationType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ApplicationType" Type="Self.ApplicationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ApplicationType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicationType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ApplicationType" Type="Self.ApplicationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ApplicationType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiayAidStatus_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BeneficiayAidStatus" Type="Self.BeneficiayAidStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BeneficiayAidStatus">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiayAidStatus_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BeneficiayAidStatus" Type="Self.BeneficiayAidStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BeneficiayAidStatus">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharitableFundType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CharitableFundType" Type="Self.CharitableFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CharitableFundType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharitableFundType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CharitableFundType" Type="Self.CharitableFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CharitableFundType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeDegreeLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeDegreeLevel" Type="Self.CollegeDegreeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeDegreeLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeDegreeLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeDegreeLevel" Type="Self.CollegeDegreeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeDegreeLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeType" Type="Self.CollegeType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeType" Type="Self.CollegeType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Country" Type="Self.Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Country">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Country" Type="Self.Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Country">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistitutionType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="DistitutionType" Type="Self.DistitutionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="DistitutionType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistitutionType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="DistitutionType" Type="Self.DistitutionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="DistitutionType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationLevel" Type="Self.EducationLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationLevel" Type="Self.EducationLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationType" Type="Self.EducationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationType" Type="Self.EducationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailSettings_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailSettings" Type="Self.EmailSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailSettings">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailSettings_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailSettings" Type="Self.EmailSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailSettings">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailTemplate_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailTemplate" Type="Self.EmailTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailTemplate">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailTemplate_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailTemplate" Type="Self.EmailTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailTemplate">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasCompany_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="GasCompany" Type="Self.GasCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="GasCompany">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasCompany_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="GasCompany" Type="Self.GasCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="GasCompany">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gender_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Gender" Type="Self.Gender" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Gender">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gender_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Gender" Type="Self.Gender" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Gender">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="HouseType" Type="Self.HouseType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="HouseType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="HouseType" Type="Self.HouseType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="HouseType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdProofType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="IdProofType" Type="Self.IdProofType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="IdProofType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdProofType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="IdProofType" Type="Self.IdProofType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="IdProofType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvertType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="InvertType" Type="Self.InvertType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="InvertType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvertType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="InvertType" Type="Self.InvertType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="InvertType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginDetails_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="LoginDetails" Type="Self.LoginDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="LoginDetails">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginDetails_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="LoginDetails" Type="Self.LoginDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="LoginDetails">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="MemberType" Type="Self.MemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="MemberType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="MemberType" Type="Self.MemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="MemberType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Module_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Module_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentMode_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentMode" Type="Self.PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentMode_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentMode" Type="Self.PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PensionType_Administrator2">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PensionType" Type="Self.PensionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PensionType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PensionType_Administrator3">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PensionType" Type="Self.PensionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PensionType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relationship_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Relationship" Type="Self.Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Relationship">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relationship_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Relationship" Type="Self.Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Relationship">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Religion_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Religion" Type="Self.Religion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Religion">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Religion_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Religion" Type="Self.Religion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Religion">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReligiousFundType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ReligiousFundType" Type="Self.ReligiousFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ReligiousFundType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReligiousFundType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ReligiousFundType" Type="Self.ReligiousFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ReligiousFundType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResidentType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ResidentType" Type="Self.ResidentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ResidentType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResidentType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ResidentType" Type="Self.ResidentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ResidentType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Role" Type="Self.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Role" Type="Self.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolClassLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolClassLevel" Type="Self.SchoolClassLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolClassLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolClassLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolClassLevel" Type="Self.SchoolClassLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolClassLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolType" Type="Self.SchoolType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolType" Type="Self.SchoolType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSSettings_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSSettings" Type="Self.SMSSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSSettings">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSSettings_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSSettings" Type="Self.SMSSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSSettings">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSTemplate_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSTemplate" Type="Self.SMSTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSTemplate">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSTemplate_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSTemplate" Type="Self.SMSTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSTemplate">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyAreaCode_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyAreaCode" Type="Self.SurveyAreaCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyAreaCode">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyAreaCode_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyAreaCode" Type="Self.SurveyAreaCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyAreaCode">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConclusionCategory_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConclusionCategory" Type="Self.SurveyConclusionCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConclusionCategory">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConclusionCategory_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConclusionCategory" Type="Self.SurveyConclusionCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConclusionCategory">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConcusionQuestion_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConcusionQuestion" Type="Self.SurveyConcusionQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConcusionQuestion">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConcusionQuestion_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConcusionQuestion" Type="Self.SurveyConcusionQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConcusionQuestion">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyStatus_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyStatus" Type="Self.SurveyStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyStatus">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyStatus_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyStatus" Type="Self.SurveyStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyStatus">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyType" Type="Self.SurveyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyType" Type="Self.SurveyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToiletType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ToiletType" Type="Self.ToiletType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ToiletType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToiletType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ToiletType" Type="Self.ToiletType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ToiletType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrustType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="TrustType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrustType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="TrustType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="UniversityType" Type="Self.UniversityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="UniversityType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="UniversityType" Type="Self.UniversityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="UniversityType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterConnection_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WaterConnection" Type="Self.WaterConnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WaterConnection">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterConnection_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WaterConnection" Type="Self.WaterConnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WaterConnection">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WorkType" Type="Self.WorkType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WorkType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WorkType" Type="Self.WorkType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WorkType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_BranchLocation">
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BranchLocation">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_TrustType">
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrustType">
+        <PropertyRef Name="TrustTypeId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="BranchTrustTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_BranchLocation">
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BranchLocation">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country1">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Module">
+    <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Administrators" EntityType="Self.Administrator" />
     <EntitySet Name="ApplicationTypes" EntityType="Self.ApplicationType" />
     <EntitySet Name="BankBranches" EntityType="Self.BankBranch" />
@@ -647,6 +2115,7 @@
     <EntitySet Name="Modules" EntityType="Self.Module" />
     <EntitySet Name="PaymentModes" EntityType="Self.PaymentMode" />
     <EntitySet Name="PaymentTypes" EntityType="Self.PaymentType" />
+    <EntitySet Name="PensionTypes" EntityType="Self.PensionType" />
     <EntitySet Name="Relationships" EntityType="Self.Relationship" />
     <EntitySet Name="Religions" EntityType="Self.Religion" />
     <EntitySet Name="ReligiousFundTypes" EntityType="Self.ReligiousFundType" />
@@ -670,6 +2139,425 @@
     <EntitySet Name="WorkTypes" EntityType="Self.WorkType" />
     <EntitySet Name="CollegeDegreeLevels" EntityType="Self.CollegeDegreeLevel" />
     <EntitySet Name="GasCompanies" EntityType="Self.GasCompany" />
-    <EntitySet Name="PensionTypes" EntityType="Self.PensionType" />
+    <AssociationSet Name="FK_Administrator_Administrator" Association="Self.FK_Administrator_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Administrator1" EntitySet="Administrators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Administrator_Administrator1" Association="Self.FK_Administrator_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Administrator1" EntitySet="Administrators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicationType_Administrator" Association="Self.FK_ApplicationType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ApplicationType" EntitySet="ApplicationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicationType_Administrator1" Association="Self.FK_ApplicationType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ApplicationType" EntitySet="ApplicationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_Administrator" Association="Self.FK_BankBranch_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BankBranch" EntitySet="BankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_Administrator1" Association="Self.FK_BankBranch_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BankBranch" EntitySet="BankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiayAidStatus_Administrator" Association="Self.FK_BeneficiayAidStatus_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BeneficiayAidStatus" EntitySet="BeneficiayAidStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiayAidStatus_Administrator1" Association="Self.FK_BeneficiayAidStatus_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BeneficiayAidStatus" EntitySet="BeneficiayAidStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_Administrator" Association="Self.FK_BranchLocation_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BranchLocation" EntitySet="BranchLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_Administrator1" Association="Self.FK_BranchLocation_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="BranchLocation" EntitySet="BranchLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharitableFundType_Administrator" Association="Self.FK_CharitableFundType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CharitableFundType" EntitySet="CharitableFundTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharitableFundType_Administrator1" Association="Self.FK_CharitableFundType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CharitableFundType" EntitySet="CharitableFundTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Administrator" Association="Self.FK_City_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Administrator1" Association="Self.FK_City_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeDegreeLevel_Administrator" Association="Self.FK_CollegeDegreeLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CollegeDegreeLevel" EntitySet="CollegeDegreeLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeDegreeLevel_Administrator1" Association="Self.FK_CollegeDegreeLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CollegeDegreeLevel" EntitySet="CollegeDegreeLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeType_Administrator" Association="Self.FK_CollegeType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CollegeType" EntitySet="CollegeTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeType_Administrator1" Association="Self.FK_CollegeType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="CollegeType" EntitySet="CollegeTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_Administrator" Association="Self.FK_Country_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Country" EntitySet="Countries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_Administrator1" Association="Self.FK_Country_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Country" EntitySet="Countries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistitutionType_Administrator" Association="Self.FK_DistitutionType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="DistitutionType" EntitySet="DistitutionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistitutionType_Administrator1" Association="Self.FK_DistitutionType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="DistitutionType" EntitySet="DistitutionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationLevel_Administrator" Association="Self.FK_EducationLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EducationLevel" EntitySet="EducationLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationLevel_Administrator1" Association="Self.FK_EducationLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EducationLevel" EntitySet="EducationLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationType_Administrator" Association="Self.FK_EducationType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EducationType" EntitySet="EducationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationType_Administrator1" Association="Self.FK_EducationType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EducationType" EntitySet="EducationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailSettings_Administrator" Association="Self.FK_EmailSettings_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EmailSettings" EntitySet="EmailSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailSettings_Administrator1" Association="Self.FK_EmailSettings_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EmailSettings" EntitySet="EmailSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailTemplate_Administrator" Association="Self.FK_EmailTemplate_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EmailTemplate" EntitySet="EmailTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailTemplate_Administrator1" Association="Self.FK_EmailTemplate_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="EmailTemplate" EntitySet="EmailTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Administrator" Association="Self.FK_Employee_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Administrator1" Association="Self.FK_Employee_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasCompany_Administrator" Association="Self.FK_GasCompany_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="GasCompany" EntitySet="GasCompanies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasCompany_Administrator1" Association="Self.FK_GasCompany_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="GasCompany" EntitySet="GasCompanies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gender_Administrator" Association="Self.FK_Gender_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Gender" EntitySet="Genders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gender_Administrator1" Association="Self.FK_Gender_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Gender" EntitySet="Genders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseType_Administrator" Association="Self.FK_HouseType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="HouseType" EntitySet="HouseTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseType_Administrator1" Association="Self.FK_HouseType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="HouseType" EntitySet="HouseTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdProofType_Administrator" Association="Self.FK_IdProofType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="IdProofType" EntitySet="IdProofTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdProofType_Administrator1" Association="Self.FK_IdProofType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="IdProofType" EntitySet="IdProofTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvertType_Administrator" Association="Self.FK_InvertType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="InvertType" EntitySet="InvertTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvertType_Administrator1" Association="Self.FK_InvertType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="InvertType" EntitySet="InvertTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginDetails_Administrator" Association="Self.FK_LoginDetails_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="LoginDetails" EntitySet="LoginDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginDetails_Administrator1" Association="Self.FK_LoginDetails_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="LoginDetails" EntitySet="LoginDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberType_Administrator" Association="Self.FK_MemberType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="MemberType" EntitySet="MemberTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberType_Administrator1" Association="Self.FK_MemberType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="MemberType" EntitySet="MemberTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Module_Administrator" Association="Self.FK_Module_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Module" EntitySet="Modules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Module_Administrator1" Association="Self.FK_Module_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Module" EntitySet="Modules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentMode_Administrator" Association="Self.FK_PaymentMode_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentMode_Administrator1" Association="Self.FK_PaymentMode_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentType_Administrator" Association="Self.FK_PaymentType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PaymentType" EntitySet="PaymentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentType_Administrator1" Association="Self.FK_PaymentType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PaymentType" EntitySet="PaymentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PensionType_Administrator2" Association="Self.FK_PensionType_Administrator2">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PensionType" EntitySet="PensionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PensionType_Administrator3" Association="Self.FK_PensionType_Administrator3">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="PensionType" EntitySet="PensionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relationship_Administrator" Association="Self.FK_Relationship_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Relationship" EntitySet="Relationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relationship_Administrator1" Association="Self.FK_Relationship_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Relationship" EntitySet="Relationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Religion_Administrator" Association="Self.FK_Religion_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Religion" EntitySet="Religions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Religion_Administrator1" Association="Self.FK_Religion_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Religion" EntitySet="Religions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReligiousFundType_Administrator" Association="Self.FK_ReligiousFundType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ReligiousFundType" EntitySet="ReligiousFundTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReligiousFundType_Administrator1" Association="Self.FK_ReligiousFundType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ReligiousFundType" EntitySet="ReligiousFundTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResidentType_Administrator" Association="Self.FK_ResidentType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ResidentType" EntitySet="ResidentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResidentType_Administrator1" Association="Self.FK_ResidentType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ResidentType" EntitySet="ResidentTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Administrator" Association="Self.FK_Role_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Administrator1" Association="Self.FK_Role_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Administrator" Association="Self.FK_RoleAssignment_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Administrator1" Association="Self.FK_RoleAssignment_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolClassLevel_Administrator" Association="Self.FK_SchoolClassLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SchoolClassLevel" EntitySet="SchoolClassLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolClassLevel_Administrator1" Association="Self.FK_SchoolClassLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SchoolClassLevel" EntitySet="SchoolClassLevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolType_Administrator" Association="Self.FK_SchoolType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SchoolType" EntitySet="SchoolTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolType_Administrator1" Association="Self.FK_SchoolType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SchoolType" EntitySet="SchoolTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSSettings_Administrator" Association="Self.FK_SMSSettings_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SMSSettings" EntitySet="SMSSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSSettings_Administrator1" Association="Self.FK_SMSSettings_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SMSSettings" EntitySet="SMSSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSTemplate_Administrator" Association="Self.FK_SMSTemplate_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SMSTemplate" EntitySet="SMSTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSTemplate_Administrator1" Association="Self.FK_SMSTemplate_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SMSTemplate" EntitySet="SMSTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Administrator" Association="Self.FK_State_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="State" EntitySet="States" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Administrator1" Association="Self.FK_State_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="State" EntitySet="States" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyAreaCode_Administrator" Association="Self.FK_SurveyAreaCode_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyAreaCode" EntitySet="SurveyAreaCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyAreaCode_Administrator1" Association="Self.FK_SurveyAreaCode_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyAreaCode" EntitySet="SurveyAreaCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConclusionCategory_Administrator" Association="Self.FK_SurveyConclusionCategory_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyConclusionCategory" EntitySet="SurveyConclusionCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConclusionCategory_Administrator1" Association="Self.FK_SurveyConclusionCategory_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyConclusionCategory" EntitySet="SurveyConclusionCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConcusionQuestion_Administrator" Association="Self.FK_SurveyConcusionQuestion_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyConcusionQuestion" EntitySet="SurveyConcusionQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConcusionQuestion_Administrator1" Association="Self.FK_SurveyConcusionQuestion_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyConcusionQuestion" EntitySet="SurveyConcusionQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyStatus_Administrator" Association="Self.FK_SurveyStatus_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyStatus" EntitySet="SurveyStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyStatus_Administrator1" Association="Self.FK_SurveyStatus_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyStatus" EntitySet="SurveyStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyType_Administrator" Association="Self.FK_SurveyType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyType" EntitySet="SurveyTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyType_Administrator1" Association="Self.FK_SurveyType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="SurveyType" EntitySet="SurveyTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToiletType_Administrator" Association="Self.FK_ToiletType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ToiletType" EntitySet="ToiletTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToiletType_Administrator1" Association="Self.FK_ToiletType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="ToiletType" EntitySet="ToiletTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrustType_Administrator" Association="Self.FK_TrustType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="TrustType" EntitySet="TrustTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrustType_Administrator1" Association="Self.FK_TrustType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="TrustType" EntitySet="TrustTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityType_Administrator" Association="Self.FK_UniversityType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="UniversityType" EntitySet="UniversityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityType_Administrator1" Association="Self.FK_UniversityType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="UniversityType" EntitySet="UniversityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterConnection_Administrator" Association="Self.FK_WaterConnection_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="WaterConnection" EntitySet="WaterConnections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterConnection_Administrator1" Association="Self.FK_WaterConnection_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="WaterConnection" EntitySet="WaterConnections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkType_Administrator" Association="Self.FK_WorkType_Administrator">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="WorkType" EntitySet="WorkTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkType_Administrator1" Association="Self.FK_WorkType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrators" />
+      <End Role="WorkType" EntitySet="WorkTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_BranchLocation" Association="Self.FK_BankBranch_BranchLocation">
+      <End Role="BranchLocation" EntitySet="BranchLocations" />
+      <End Role="BankBranch" EntitySet="BankBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_TrustType" Association="Self.FK_BranchLocation_TrustType">
+      <End Role="TrustType" EntitySet="TrustTypes" />
+      <End Role="BranchLocation" EntitySet="BranchLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_BranchLocation" Association="Self.FK_Employee_BranchLocation">
+      <End Role="BranchLocation" EntitySet="BranchLocations" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country" Association="Self.FK_City_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country1" Association="Self.FK_City_Country1">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="State" EntitySet="States" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Module" Association="Self.FK_RoleAssignment_Module">
+      <End Role="Module" EntitySet="Modules" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Role" Association="Self.FK_RoleAssignment_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignments" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

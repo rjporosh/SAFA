@@ -14,6 +14,13 @@ namespace SAFA.Models
     
     public partial class BranchLocation
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public BranchLocation()
+        {
+            this.BankBranches = new HashSet<BankBranch>();
+            this.Employees = new HashSet<Employee>();
+        }
+    
         public int BranchId { get; set; }
         public string BranchName { get; set; }
         public Nullable<int> BranchTrustTypeId { get; set; }
@@ -22,5 +29,13 @@ namespace SAFA.Models
         public System.DateTime UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BankBranch> BankBranches { get; set; }
+        public virtual TrustType TrustType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

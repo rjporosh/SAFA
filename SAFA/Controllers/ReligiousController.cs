@@ -71,7 +71,7 @@ namespace SAFA.Controllers
             else
             {
                 status = false;
-                message = "Bank Allready Exsists !!!";
+                message = "Religion Allready Exsists !!!";
                 return new JsonResult { Data = new { status = status, message = message } };
             }
 
@@ -82,9 +82,9 @@ namespace SAFA.Controllers
         public JsonResult Create( ReligiousFundVM vmObj)
         {
 
-         //   vmObj.CreatedBy = "porosh";
+            vmObj.CreatedBy = 1;
             vmObj.CreatedDate = DateTime.Now;
-          //  vmObj.UpdatedBy = "tf";
+            vmObj.UpdatedBy = 1;
             vmObj.UpdatedDate = DateTime.Now;
 
 
@@ -116,7 +116,7 @@ namespace SAFA.Controllers
             else
             {
                 status = false;
-                message = "Name Allready Exsists !!!";
+                message = "ReligiousFundType Allready Exsists !!!";
                 return new JsonResult { Data = new { status = status, message = message } };
             }
 
@@ -131,7 +131,7 @@ namespace SAFA.Controllers
             return View();
         }
 
-        public JsonResult GetByAjax()
+        public JsonResult GetByAjaxFund()
         {
             var var = _Manager.Read().ToList();
 

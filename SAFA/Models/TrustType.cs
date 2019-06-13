@@ -14,6 +14,12 @@ namespace SAFA.Models
     
     public partial class TrustType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TrustType()
+        {
+            this.BranchLocations = new HashSet<BranchLocation>();
+        }
+    
         public int TrustTypeId { get; set; }
         public string TrustTypeName { get; set; }
         public System.DateTime CreatedDate { get; set; }
@@ -21,5 +27,10 @@ namespace SAFA.Models
         public System.DateTime UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BranchLocation> BranchLocations { get; set; }
     }
 }

@@ -14,6 +14,12 @@ namespace SAFA.Models
     
     public partial class Module
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Module()
+        {
+            this.RoleAssignments = new HashSet<RoleAssignment>();
+        }
+    
         public int ModuleId { get; set; }
         public string ModuleTitle { get; set; }
         public string Description { get; set; }
@@ -22,5 +28,10 @@ namespace SAFA.Models
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RoleAssignment> RoleAssignments { get; set; }
     }
 }

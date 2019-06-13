@@ -49,6 +49,7 @@ namespace SAFA.Models
         public virtual DbSet<Module> Modules { get; set; }
         public virtual DbSet<PaymentMode> PaymentModes { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
+        public virtual DbSet<PensionType> PensionTypes { get; set; }
         public virtual DbSet<Relationship> Relationships { get; set; }
         public virtual DbSet<Religion> Religions { get; set; }
         public virtual DbSet<ReligiousFundType> ReligiousFundTypes { get; set; }
@@ -72,6 +73,5 @@ namespace SAFA.Models
         public virtual DbSet<WorkType> WorkTypes { get; set; }
         public virtual DbSet<CollegeDegreeLevel> CollegeDegreeLevels { get; set; }
         public virtual DbSet<GasCompany> GasCompanies { get; set; }
-        public virtual DbSet<PensionType> PensionTypes { get; set; }
     }
 }

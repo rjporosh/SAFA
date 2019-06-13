@@ -29,7 +29,7 @@ function loadData() {
 
         ajax: {
 
-            url: '/Religious/GetByAjax',
+            url: '/Religious/GetByAjaxFund',
             dataSrc: ""
 
         },
@@ -37,7 +37,7 @@ function loadData() {
         columns: [
 
             {
-                data: "ReligionName"
+                data: "ReligiousFundTypeName"
             },
 
             {
@@ -56,19 +56,19 @@ function loadData() {
 
 //Function for getting the Data Based upon Class
 function getbyID(id) {
-    $('#Name').css('border-color', 'lightgrey');
+    $('#ReligiousFundTypeName').css('border-color', 'lightgrey');
 
 
 
     $.ajax({
-        url: "/Bank/GetbyID/" + id,
+        url: "/Religious/GetbyID/" + id,
         type: "GET",
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
         success: function (result) {
-            $('#ReligionId').val(result.ReligionId);
+            $('#ReligiousFundTypeId').val(result.ReligiousFundTypeId);
 
-            $('#ReligionName').val(result.ReligionName);
+            $('#ReligiousFundTypeName').val(result.ReligiousFundTypeName);
 
 
 
@@ -97,23 +97,23 @@ function Add() {
     }
     var obj = {
 
-        "ReligionId": $('#ReligionId').val(),
+        "ReligiousFundTypeId": $('#ReligiousFundTypeId').val(),
 
 
-        "ReligionName": $('#ReligionName').val()
+        "ReligiousFundTypeName": $('#ReligiousFundTypeName').val()
 
 
     };
-   
+
     $.ajax({
-        
-        url: "/Religious/add_religion",
+
+        url: "/Religious/Create",
         data: JSON.stringify(obj),
         type: "POST",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (result) {
-            debugger;
+           
             if (result.status) {
                 clearTextBox();
                 $('#message').addClass('alert alert-success').html("<strong>" + result.message + "</strong>").show(200).delay(2500).hide(200);
@@ -148,9 +148,9 @@ function Update() {
     var obj = {
 
         //"Id": $('#Id').val(),
-        "ReligionId": $('#ReligionId').val(),
+        "ReligiousFundTypeId": $('#ReligiousFundTypeId').val(),
 
-        "ReligionName": $('#ReligionName').val()
+        "ReligiousFundTypeName": $('#ReligiousFundTypeName').val()
 
     };
 
@@ -210,12 +210,12 @@ function clearTextBox() {
 function validate() {
     var isValid = true;
 
-    if ($('#ReligionName').val().trim() == "") {
-        $('#ReligionName').css('border-color', 'Red');
+    if ($('#ReligiousFundTypeName').val().trim() == "") {
+        $('#ReligiousFundTypeName').css('border-color', 'Red');
         isValid = false;
     }
     else {
-        $('#ReligionName').css('border-color', 'lightgrey');
+        $('#ReligiousFundTypeName').css('border-color', 'lightgrey');
     }
 
 

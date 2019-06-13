@@ -16,12 +16,17 @@ namespace SAFA.Models
     {
         public int CityId { get; set; }
         public string CityinName { get; set; }
-        public string StateId { get; set; }
-        public string CountryId { get; set; }
+        public Nullable<int> StateId { get; set; }
+        public Nullable<int> CountryId { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public Nullable<int> CreatedBy { get; set; }
         public System.DateTime UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public bool IsActive { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        public virtual Country Country { get; set; }
+        public virtual Country Country1 { get; set; }
     }
 }

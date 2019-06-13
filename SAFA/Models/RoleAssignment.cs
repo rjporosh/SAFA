@@ -24,5 +24,10 @@ namespace SAFA.Models
         public Nullable<int> CreatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
+    
+        public virtual Administrator Administrator { get; set; }
+        public virtual Administrator Administrator1 { get; set; }
+        public virtual Module Module { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
