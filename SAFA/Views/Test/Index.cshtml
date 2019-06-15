@@ -36,7 +36,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="./index.html" class="site_title">
+                        <a href="./index" class="site_title">
                             <!-- <i class="fa fa-paw"></i>  -->
                             <img src="~/images/safa.png" style="width:45px;height:45px;border-radius: 50%">
                             <span>Safa Baitul Maal</span>
@@ -49,27 +49,27 @@
                         <div class="menu_section">
                             <!-- <h3>General</h3> -->
                             <ul class="nav side-menu">
-                                @*<li><a href="index.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a></li>*@
+                                @*<li><a href="index"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a></li>*@
                                 <li>
                                     @Html.ActionLink("Test", "Index", "Test", new { @class = "elements" }, null)
                                 </li>
                                 <li>
                                     <a><i class="fa fa-user" aria-hidden="true"></i> Master Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        @*<li><a href="religious_fund.html">Religious Fund</a></li>*@
+                                        @*<li><a href="religious_fund">Religious Fund</a></li>*@
                                         <li>
                                             @Html.ActionLink("Religious", "add_religious_fund", "Religious", new { @class = "elements" }, null)
                                         </li>
                                         <li>
                                             @Html.ActionLink("Charitable", "charitable_fund", "Charitable", new { @class = "elements" }, null)
                                         </li>
-                                        @*<li><a href="charitable_fund.html">Charitable Fund</a></li>*@
+                                        @*<li><a href="charitable_fund">Charitable Fund</a></li>*@
                                         <li><a href="../id/id_proof">ID Proofs</a></li>
                                         <li><a href="../inverts/inverts">Inverts</a></li>
                                         @*//from here i need to create*@
                                         <li><a href="../bank/paymentType">Payment Types</a></li>
                                    
-                                       <li><a href="../bank/branch_location.html">Branch-Location</a></li>
+                                       <li><a href="../bank/branch_location">Branch-Location</a></li>
                                         <li><a href="../bank/bank_branch">Bank-Branch</a></li>
                                         <li><a href="../test/home_slider">Home Slider</a></li>
                                         <li><a href="../test/trustType">Trust Type</a></li>
@@ -94,40 +94,40 @@
                                 <li>
                                     <a><i class="fa fa-envelope-o" aria-hidden="true"></i> Email & SMS Management <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="email_template.html">Email Template</a></li>
-                                        <li><a href="email_setting.html">Email Setting</a></li>
-                                        <li><a href="sms_template.html">SMS Template</a></li>
-                                        <li><a href="sms_setting.html">SMS Setting</a></li>
+                                        <li><a href="email_template">Email Template</a></li>
+                                        <li><a href="email_setting">Email Setting</a></li>
+                                        <li><a href="sms_template">SMS Template</a></li>
+                                        <li><a href="sms_setting">SMS Setting</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="fa fa-user" aria-hidden="true"></i> Survey Master Management  <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="work_type.html">Work Type</a></li>
-                                        <li><a href="water_connection.html">Water Connection</a></li>
-                                        <li><a href="toilet_type.html">Toilet Type</a></li>
-                                        <li><a href="house_type.html">House Type</a></li>
-                                        <li><a href="resident_type.html">Resident Type</a></li>
-                                        <li><a href="pension_type.html">Pension Type</a></li>
-                                        <li><a href="destitution_type.html">Destitution Type</a></li>
-                                        <li><a href="education_level.html">Education Level</a></li>
-                                        <li><a href="education_type.html">Education Type</a></li>
-                                        <li><a href="school_type.html">School Type</a></li>
-                                        <li><a href="school_class_level.html">School Class Level</a></li>
-                                        <li><a href="college_type.html">College Type</a></li>
-                                        <li><a href="college_degree_level.html">College Degree Level</a></li>
-                                        <li><a href="university_type.html">University Type</a></li>
-                                        <li><a href="survey_type.html">Survey Type</a></li>
-                                        <li><a href="survey_status.html">Survey Status</a></li>
-                                        <li><a href="survey_area_code.html">Survey Area Code</a></li>
-                                        <li><a href="survey_concusion_category.html">Survey Concusion Category</a></li>
-                                        <li><a href="survey_concusion_question.html">Survey Concusion Question</a></li>
+                                        <li><a href="work_type">Work Type</a></li>
+                                        <li><a href="water_connection">Water Connection</a></li>
+                                        <li><a href="toilet_type">Toilet Type</a></li>
+                                        <li><a href="house_type">House Type</a></li>
+                                        <li><a href="resident_type">Resident Type</a></li>
+                                        <li><a href="pension_type">Pension Type</a></li>
+                                        <li><a href="destitution_type">Destitution Type</a></li>
+                                        <li><a href="education_level">Education Level</a></li>
+                                        <li><a href="education_type">Education Type</a></li>
+                                        <li><a href="school_type">School Type</a></li>
+                                        <li><a href="school_class_level">School Class Level</a></li>
+                                        <li><a href="college_type">College Type</a></li>
+                                        <li><a href="college_degree_level">College Degree Level</a></li>
+                                        <li><a href="university_type">University Type</a></li>
+                                        <li><a href="survey_type">Survey Type</a></li>
+                                        <li><a href="survey_status">Survey Status</a></li>
+                                        <li><a href="survey_area_code">Survey Area Code</a></li>
+                                        <li><a href="survey_concusion_category">Survey Concusion Category</a></li>
+                                        <li><a href="survey_concusion_question">Survey Concusion Question</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="fa fa-edit"></i> Employee Management<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="employee.html">Employee</a></li>
+                                        <li><a href="employee">Employee</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-wordpress" aria-hidden="true"></i> CMS </a></li>
@@ -148,7 +148,7 @@
                         <a data-toggle="tooltip" data-placement="top" title="Lock">
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                         </a>
                     </div>
@@ -177,7 +177,7 @@
                                         </a>
                                     </li>
                                     <li><a href="javascript:;">Help</a></li>
-                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                    <li><a href="login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
                             </li>
                             <li role="presentation" class="dropdown">

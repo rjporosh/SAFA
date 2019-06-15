@@ -22,6 +22,16 @@
     <link href="~/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="~/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="~/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="~/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="~/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="~/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="~/build/css/custom.min.css" rel="stylesheet">
@@ -33,7 +43,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="./Test/index" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                        <a href="../Test/index" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -93,8 +103,8 @@
                                 <li>
                                     <a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="tables">Tables</a></li>
-                                        <li><a href="tables_dynamic">Table Dynamic</a></li>
+                                        <li><a href="../Test/tables">Tables</a></li>
+                                        <li><a href="../Test/tables_dynamic">Table Dynamic</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -200,7 +210,7 @@
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <img src="~/images/img.jpg" alt="">John Doe
-                                    <span class="fa fa-angle-down"></span>
+                                    <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                                     <li><a href="javascript:;"> Profile</a></li>
@@ -287,29 +297,20 @@
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
+
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Manage Inverts</h3>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search by name">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Go!</button>
-                                </span>
-                            </div>
-                        </div>
+                            <h3>Create Invert</h3>
 
-                        <div class="title_right">
-                            <a href="add_invert" class="btn btn-info" role="button" style="float:right;margin-top: 40px;margin-right: 0">Add New Invert</a>
                         </div>
                     </div>
 
                     <div class="clearfix"></div>
-
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <!-- <h2>Projects</h2> -->
+                                    <h2>Please fill the following details</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li>
                                             <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -332,86 +333,52 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    <!-- start project list -->
-                                    <table class="table table-striped projects">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 1%">#</th>
-                                                <th style="width: 69%">Invert Name</th>
-                                                <!-- <th>Team Members</th>
-                                                <th>Project Progress</th>
-                                                <th>Status</th> -->
-                                                <th style="width: 30%">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Awareness of Message of Humanity</a>
+                                    <br />
+                                    <form id="myCustomForm" data-parsley-validate class="form-horizontal form-label-left">
 
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <!-- <tr>
-                                              <td>#</td>
-                                              <td>
-                                                <a>Pesamakini Backend UI</a>
-                                                <br />
-                                                <small>Created 01.01.2015</small>
-                                              </td>
-                                              <td>
-                                                <ul class="list-inline">
-                                                  <li>
-                                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                                  </li>
-                                                  <li>
-                                                    <img src="images/user.png" class="avatar" alt="Avatar">
-                                                  </li>
-                                                </ul>
-                                              </td>
-                                              <td class="project_progress">
-                                                <div class="progress progress_sm">
-                                                  <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
-                                                </div>
-                                                <small>47% Complete</small>
-                                              </td>
-                                              <td>
-                                                <button type="button" class="btn btn-success btn-xs">Success</button>
-                                              </td>
-                                              <td>
-                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                              </td>
-                                            </tr> -->
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="InvertTypeName">
+                                                Invert Name <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="InvertTypeName" name="InvertTypeName" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
 
-                                        </tbody>
-                                    </table>
-                                    <!-- end project list -->
 
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <button type="button" id="btnAdd" onclick="return Add();" class="btn btn-success" style="float: right;margin-right: 0">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div id="message">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- /page content -->
-            <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-        </div>
-    </div>
 
+
+            </div>
+        </div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                &copy;2019 All rights reserved. <a href="http://amtechgcc.com" target="_blank">AmTech Solutions</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+   
+    <script src="~/Scripts/invert.js"></script>
     <!-- jQuery -->
     <script src="~/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -422,8 +389,32 @@
     <script src="~/vendors/nprogress/nprogress.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="~/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-
+    <!-- iCheck -->
+    <script src="~/vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/vendors/moment/min/moment.min.js"></script>
+    <script src="~/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="~/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="~/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="~/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="~/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="~/vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="~/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="~/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="~/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="~/vendors/starrr/dist/starrr.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="~/build/js/custom.min.js"></script>
+
 </body>
 </html>
+

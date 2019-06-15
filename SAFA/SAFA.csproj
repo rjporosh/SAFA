@@ -269,6 +269,7 @@
       <DependentUpon>DBEntity.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\invert.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -4859,6 +4860,7 @@
       <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModel\BankBranchVM.cs" />
+    <Compile Include="Models\ViewModel\InvertVM.cs" />
     <Compile Include="Models\ViewModel\ReligionVM.cs" />
     <Compile Include="Models\ViewModel\ReligiousFundVM.cs" />
     <Compile Include="Models\WaterConnection.cs">
@@ -4870,6 +4872,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepo\IRepository.cs" />
     <Compile Include="Repository\BaseRepo\Repository.cs" />
+    <Compile Include="Repository\IInvertRepository.cs" />
     <Compile Include="Repository\IReligionRepository.cs" />
     <Compile Include="Repository\IReligiousFundRepository.cs" />
   </ItemGroup>
@@ -4902,6 +4905,8 @@
     <Content Include="Views\ID\edit_id_proof.cshtml" />
     <Content Include="Views\Test\form.cshtml" />
     <Content Include="Views\Test\form_advanced.cshtml" />
+    <Content Include="Views\Test\login.cshtml" />
+    <Content Include="Views\Inverts\add_invert.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

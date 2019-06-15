@@ -28,6 +28,10 @@ namespace SAFA
 
                 configaration.CreateMap<Religion, ReligionVM>();
                 configaration.CreateMap<ReligionVM, Religion>();
+                // For Invert
+
+                configaration.CreateMap<InvertType, InvertVM>();
+                configaration.CreateMap<InvertVM, InvertType>();
             });
         }
     }
