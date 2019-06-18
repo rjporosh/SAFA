@@ -147,7 +147,7 @@ namespace SAFA.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetByAjax()
+        public ActionResult GetByAjax()
         {
             var var = _Manager1.Read().ToList();
 

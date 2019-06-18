@@ -4,38 +4,40 @@ using SAFA.Models.ViewModel;
 using SAFA.Repository;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace SAFA.Controllers
 {
-    public class IDController : Controller
+    public class BankController : Controller
     {
-        
-        private IdRepository _Manager;
+        // GET: Bank
+        private BankRepository _Manager;
         SBMDBEntities db = new SBMDBEntities();
 
-        public IDController()
+        public BankController()
         {
-            _Manager = new IdRepository();
+            _Manager = new BankRepository();
 
         }
 
         string message = "";
         bool status = false;
-        // GET: ID
-        public ActionResult id_proof()
+        public ActionResult Index()
         {
             return View();
         }
-        public ActionResult add_id_proof()
+        public ActionResult paymentType()
+        {
+            return View();
+        }
+        public ActionResult add_paymentType()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult add_id_proof(IdVM vmObj)
+        public ActionResult add_id_proof(PaymentTypeVM vmObj)
         {
             vmObj.CreatedBy = 1;
             vmObj.CreatedDate = DateTime.Now;
@@ -49,7 +51,7 @@ namespace SAFA.Controllers
             {
 
 
-                var result = Mapper.Map<IdProofType>(vmObj);
+                var result = Mapper.Map<PaymentType>(vmObj);
 
                 result.IsActive = true;
 
@@ -71,24 +73,10 @@ namespace SAFA.Controllers
             else
             {
                 status = false;
-                message = "IdProofType Allready Exsists !!!";
+                message = "PaymentType Allready Exsists !!!";
                 return new JsonResult { Data = new { status = status, message = message } };
             }
 
-        }
-        public ActionResult edit_id_proof()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult edit_id_proof(IdProofType idProofType)
-        {
-            db.IdProofTypes.Attach(idProofType);
-
-            db.Entry(idProofType).State = EntityState.Modified;
-             db.SaveChanges();
-            return View("id_proof");
         }
     }
 }

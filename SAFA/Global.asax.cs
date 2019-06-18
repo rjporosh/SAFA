@@ -32,6 +32,18 @@ namespace SAFA
 
                 configaration.CreateMap<InvertType, InvertVM>();
                 configaration.CreateMap<InvertVM, InvertType>();
+                // For Charitable
+
+                configaration.CreateMap<CharitableFundType, CharitableVM>();
+                configaration.CreateMap<CharitableVM, CharitableFundType>();
+                // For Id
+
+                configaration.CreateMap<IdProofType, IdVM>();
+                configaration.CreateMap<IdVM, IdProofType>();
+                // For PaymentType
+
+                configaration.CreateMap<PaymentType, PaymentTypeVM>();
+                configaration.CreateMap<PaymentTypeVM, PaymentType>();
             });
         }
     }

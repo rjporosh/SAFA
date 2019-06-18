@@ -194,6 +194,8 @@
       <DependentUpon>DBEntity.edmx</DependentUpon>
       <LastGenOutput>DBEntity.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\add_id_proof.js" />
+    <Content Include="Scripts\add_paymentType.js" />
     <Content Include="Scripts\add_religion.js" />
     <Content Include="Scripts\add_religious_fund.js" />
     <Content Include="Scripts\autosize.min.js" />
@@ -203,6 +205,7 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\charitable_fund.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\custom.min.js" />
     <Content Include="Scripts\daterangepicker.js" />
@@ -4701,6 +4704,7 @@
     <Compile Include="Auth\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Auth\ICustomPrincipal.cs" />
     <Compile Include="Controllers\AdministratorsController.cs" />
+    <Compile Include="Controllers\BankController.cs" />
     <Compile Include="Controllers\CharitableController.cs" />
     <Compile Include="Controllers\IDController.cs" />
     <Compile Include="Controllers\InvertsController.cs" />
@@ -4864,7 +4868,10 @@
       <DependentUpon>DBEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModel\BankBranchVM.cs" />
+    <Compile Include="Models\ViewModel\CharitableVM.cs" />
+    <Compile Include="Models\ViewModel\IdVM.cs" />
     <Compile Include="Models\ViewModel\InvertVM.cs" />
+    <Compile Include="Models\ViewModel\PaymentTypeVM.cs" />
     <Compile Include="Models\ViewModel\ReligionVM.cs" />
     <Compile Include="Models\ViewModel\ReligiousFundVM.cs" />
     <Compile Include="Models\WaterConnection.cs">
@@ -4876,6 +4883,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepo\IRepository.cs" />
     <Compile Include="Repository\BaseRepo\Repository.cs" />
+    <Compile Include="Repository\IBankRepository.cs" />
+    <Compile Include="Repository\ICharitableRepository.cs" />
+    <Compile Include="Repository\IIdRepository.cs" />
     <Compile Include="Repository\IInvertRepository.cs" />
     <Compile Include="Repository\IReligionRepository.cs" />
     <Compile Include="Repository\IReligiousFundRepository.cs" />
@@ -4912,6 +4922,8 @@
     <Content Include="Views\Test\login.cshtml" />
     <Content Include="Views\Inverts\add_invert.cshtml" />
     <Content Include="Views\Religious\religion.cshtml" />
+    <Content Include="Views\Bank\paymentType.cshtml" />
+    <Content Include="Views\Bank\add_paymentType.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
