@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
 
+    
     loadData();
 
 
@@ -17,13 +18,14 @@
 
 //Load Data function 2nd wayyyyyyyy  
 
-
 function loadData() {
 
+    $('#myDataTable_wrapper .dataTables_filter input').addClass("input-medium "); $('#myDataTable_wrapper .dataTables_length select').addClass("select2-wrapper span12");
 
 
-    $('#mydatatable').DataTable({
+    $('#myDataTable').DataTable({
 
+        "sDom": "<'row'<'col-md-6'l <'toolbar'>><'col-md-6'f>r>t<'row'<'col-md-12'p i>>",
 
 
 
@@ -35,23 +37,30 @@ function loadData() {
         },
 
         columns: [
-
             {
                 data: "ReligionName"
             },
-
+           
             {
-                render: function (data, type, organization) {
-                    return "<div class='btn-group'><a href='#' class='btn btn-primary' onclick='return getbyID(" + organization.Id + ")'>Edit</a><a href='#' class='btn btn-danger' onclick='Delete(" + organization.Id + ")'>Delete</a></div>";
+                render: function (data, type, obj) {
+                    return "<div class='btn-group'><a href='#' class='btn btn-primary' onclick='return getbyID(" + obj.Id + ")'>Edit</a><a href='#' class='btn btn-danger waves-effect waves-light' onclick='Delete(" + obj.Id + ")'>Delete</a></div>";
                 }
             }
-        ]
+        ],
+
+        fixedColumns: {
+            rightColumns: 1
+        },
 
 
+
+        "bDestroy": true
     });
 
-
+    $("div.toolbar").html('<div class="table-tools-actions"><button style="margin-left:20px;width: 90px;" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add</button></div>');
+    $("#mydatatable").dataTable().fnDestroy();
 }
+
 
 
 //Function for getting the Data Based upon Class
@@ -61,7 +70,7 @@ function getbyID(id) {
 
 
     $.ajax({
-        url: "/Bank/GetbyID/" + id,
+        url: "/Religious/GetbyID/" + id,
         type: "GET",
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
@@ -191,7 +200,7 @@ function Delete(id) {
             contentType: "application/json;charset=UTF-8",
             dataType: "json",
             success: function (result) {
-                $("#mydatatable").dataTable().fnDestroy();
+                $("#myDataTable").dataTable().fnDestroy();
                 loadData();
             },
             error: function (errormessage) {

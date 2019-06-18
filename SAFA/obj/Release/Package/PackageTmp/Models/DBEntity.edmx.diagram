@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4c5fb6c72c2548e2a68f7b17b639f5fb" Name="Diagram1">
+        <EntityTypeShape EntityType="SBMDBModel.Administrator" Width="1.5" PointX="0.75" PointY="79.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.ApplicationType" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.BankBranch" Width="1.5" PointX="6" PointY="88.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.BeneficiayAidStatu" Width="1.5" PointX="3" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.BranchLocation" Width="1.5" PointX="5.25" PointY="118.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.CharitableFundType" Width="1.5" PointX="3" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.City" Width="1.5" PointX="5.25" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.CollegeType" Width="1.5" PointX="3" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Country" Width="1.5" PointX="3" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.DistitutionType" Width="1.5" PointX="3" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.EducationLevel" Width="1.5" PointX="3" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.EducationType" Width="1.5" PointX="3" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.EmailSetting" Width="1.5" PointX="3" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.EmailTemplate" Width="1.5" PointX="3" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Employee" Width="1.5" PointX="7.5" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Gender" Width="1.5" PointX="3" PointY="64.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.HouseType" Width="1.5" PointX="3" PointY="68.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.IdProofType" Width="1.5" PointX="3" PointY="71.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.InvertType" Width="1.5" PointX="3" PointY="75.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.LoginDetail" Width="1.5" PointX="3" PointY="78.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.MemberType" Width="1.5" PointX="3" PointY="83.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Module" Width="1.5" PointX="3" PointY="86.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.PaymentMode" Width="1.5" PointX="3" PointY="90.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.PaymentType" Width="1.5" PointX="3" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.PensionType" Width="1.5" PointX="3" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Relationship" Width="1.5" PointX="3" PointY="101" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Religion" Width="1.5" PointX="3" PointY="104.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.ReligiousFundType" Width="1.5" PointX="3" PointY="108" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.ResidentType" Width="1.5" PointX="3" PointY="111.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.Role" Width="1.5" PointX="3" PointY="115" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.RoleAssignment" Width="1.5" PointX="5.25" PointY="97.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SchoolClassLevel" Width="1.5" PointX="3" PointY="119" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SchoolType" Width="1.5" PointX="3" PointY="122.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SMSSetting" Width="1.5" PointX="3" PointY="126" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SMSTemplate" Width="1.5" PointX="3" PointY="130.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.State" Width="1.5" PointX="8.25" PointY="66.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SurveyAreaCode" Width="1.5" PointX="3" PointY="134.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SurveyConclusionCategory" Width="1.5" PointX="3" PointY="138.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SurveyConcusionQuestion" Width="1.5" PointX="3" PointY="142.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SurveyStatu" Width="1.5" PointX="3" PointY="146.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.SurveyType" Width="1.5" PointX="3" PointY="150.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.ToiletType" Width="1.5" PointX="3" PointY="153.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.TrustType" Width="1.5" PointX="3" PointY="157.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.UniversityType" Width="1.5" PointX="3" PointY="161" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.WaterConnection" Width="1.5" PointX="3" PointY="164.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.WorkType" Width="1.5" PointX="3" PointY="168" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.CollegeDegreeLevel" Width="1.5" PointX="3" PointY="171.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBMDBModel.GasCompany" Width="1.5" PointX="3" PointY="175" IsExpanded="true" />
+        <AssociationConnector Association="SBMDBModel.FK_Administrator_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Administrator_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ApplicationType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ApplicationType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BankBranch_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BankBranch_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BeneficiayAidStatus_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BeneficiayAidStatus_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BranchLocation_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BranchLocation_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CharitableFundType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CharitableFundType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_City_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_City_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CollegeDegreeLevel_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CollegeDegreeLevel_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CollegeType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_CollegeType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Country_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Country_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_DistitutionType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_DistitutionType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EducationLevel_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EducationLevel_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EducationType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EducationType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EmailSettings_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EmailSettings_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EmailTemplate_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_EmailTemplate_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Employee_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Employee_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_GasCompany_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_GasCompany_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Gender_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Gender_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_HouseType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_HouseType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_IdProofType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_IdProofType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_InvertType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_InvertType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_LoginDetails_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_LoginDetails_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_MemberType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_MemberType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Module_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Module_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PaymentMode_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PaymentMode_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PaymentType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PaymentType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PensionType_Administrator2" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_PensionType_Administrator3" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Relationship_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Relationship_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Religion_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Religion_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ReligiousFundType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ReligiousFundType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ResidentType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ResidentType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Role_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Role_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_RoleAssignment_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_RoleAssignment_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SchoolClassLevel_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SchoolClassLevel_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SchoolType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SchoolType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SMSSettings_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SMSSettings_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SMSTemplate_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SMSTemplate_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_State_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_State_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyAreaCode_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyAreaCode_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyConclusionCategory_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyConclusionCategory_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyConcusionQuestion_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyConcusionQuestion_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyStatus_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyStatus_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_SurveyType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ToiletType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_ToiletType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_TrustType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_TrustType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_UniversityType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_UniversityType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_WaterConnection_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_WaterConnection_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_WorkType_Administrator" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_WorkType_Administrator1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BankBranch_BranchLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_BranchLocation_TrustType" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Employee_BranchLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_City_Country1" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_State_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_RoleAssignment_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="SBMDBModel.FK_RoleAssignment_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

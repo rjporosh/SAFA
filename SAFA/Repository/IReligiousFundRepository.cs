@@ -1,4 +1,4 @@
-﻿using DealerManagementSoftware.Repository.BaseRepo;
+﻿using SAFA.Repository.BaseRepo;
 using SAFA.Models;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace SAFA.Repository
         {
             var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string current = (identity.Identity.Name).Split('&')[0];
-            // return ReadAll().Where(m => m.AddedBy == current);
+             //return ReadAll().Where(m => m.CreatedBy == current);
             return ReadAll();
         }
     }

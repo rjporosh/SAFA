@@ -1,4 +1,4 @@
-﻿using DealerManagementSoftware.Repository.BaseRepo;
+﻿using SAFA.Repository.BaseRepo;
 using SAFA.Models;
 using SAFA.Models.ViewModel;
 using System;

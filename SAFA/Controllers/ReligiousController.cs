@@ -125,12 +125,17 @@ namespace SAFA.Controllers
 
         }
 
-
+        
+        public ActionResult religion()
+        {
+           
+            return View();
+        }
         public ActionResult add_religious_fund()
         {
             return View();
         }
-
+        [HttpGet]
         public JsonResult GetByAjaxFund()
         {
             var var = _Manager.Read().ToList();
@@ -141,6 +146,16 @@ namespace SAFA.Controllers
 
         }
 
+        [HttpGet]
+        public JsonResult GetByAjax()
+        {
+            var var = _Manager1.Read().ToList();
+
+            var MDirectorList = Mapper.Map<List<ReligionVM>>(var);
+
+            return new JsonResult { Data = MDirectorList, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+        }
         // ********** TEST END *****************//
 
         public JsonResult GetbyID(int? id)

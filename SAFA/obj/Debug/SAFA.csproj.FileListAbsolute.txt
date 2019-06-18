@@ -39,3 +39,4 @@ C:\Users\Porosh\Documents\Visual Studio 2015\Projects\SAFA\SAFA\bin\System.Web.H
 C:\Users\Porosh\Documents\Visual Studio 2015\Projects\SAFA\SAFA\bin\System.Web.Mvc.xml
 C:\Users\Porosh\Documents\Visual Studio 2015\Projects\SAFA\SAFA\obj\Debug\SAFA.dll
 C:\Users\Porosh\Documents\Visual Studio 2015\Projects\SAFA\SAFA\obj\Debug\SAFA.pdb
+C:\Users\Porosh\Documents\Visual Studio 2015\Projects\SAFA\SAFA\obj\Debug\SAFA.csprojResolveAssemblyReference.cache

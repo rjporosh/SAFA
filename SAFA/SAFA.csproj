@@ -268,6 +268,8 @@
     <Content Include="Models\DBEntity.edmx.diagram">
       <DependentUpon>DBEntity.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\RjPorosh.pubxml" />
+    <None Include="Properties\PublishProfiles\rplocal.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\invert.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -3801,7 +3803,9 @@
     <Content Include="vendors\validator\index.html" />
     <Content Include="vendors\validator\multifield.js" />
     <Content Include="vendors\validator\validator.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -4907,6 +4911,7 @@
     <Content Include="Views\Test\form_advanced.cshtml" />
     <Content Include="Views\Test\login.cshtml" />
     <Content Include="Views\Inverts\add_invert.cshtml" />
+    <Content Include="Views\Religious\religion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

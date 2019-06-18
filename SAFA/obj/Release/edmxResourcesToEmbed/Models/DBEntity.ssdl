@@ -1,0 +1,2377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SBMDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="100" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApplicationType">
+    <Key>
+      <PropertyRef Name="ApplicationTypeId" />
+    </Key>
+    <Property Name="ApplicationTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicationTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankBranch">
+    <Key>
+      <PropertyRef Name="BankId" />
+    </Key>
+    <Property Name="BankId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeneficiayAidStatus">
+    <Key>
+      <PropertyRef Name="BeneficiaryAidStatusId" />
+    </Key>
+    <Property Name="BeneficiaryAidStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BeneficiaryAidStatusName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BranchLocation">
+    <Key>
+      <PropertyRef Name="BranchId" />
+    </Key>
+    <Property Name="BranchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchTrustTypeId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CharitableFundType">
+    <Key>
+      <PropertyRef Name="CharitableFundTypeId" />
+    </Key>
+    <Property Name="CharitableFundTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CharitableFundTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityinName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SBMDB.dbo.CollegeDegreeLevel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CollegeDegreeLevel">
+    <Key>
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="UpdatedDate" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="CollegeDegreeLevelId" Type="int" />
+    <Property Name="CollegeDegreeLevelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CollegeType">
+    <Key>
+      <PropertyRef Name="CollegeTypeId" />
+    </Key>
+    <Property Name="CollegeTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollegeTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DistitutionType">
+    <Key>
+      <PropertyRef Name="DistitutionType" />
+    </Key>
+    <Property Name="DistitutionType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DistitutionTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EducationLevel">
+    <Key>
+      <PropertyRef Name="EducationLevelId" />
+    </Key>
+    <Property Name="EducationLevelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EducationLevelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EducationType">
+    <Key>
+      <PropertyRef Name="EducationTypeId" />
+    </Key>
+    <Property Name="EducationTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EducationTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmailSettings">
+    <Key>
+      <PropertyRef Name="EmailSettingsId" />
+    </Key>
+    <Property Name="EmailSettingsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailServer" Type="nvarchar" MaxLength="50" />
+    <Property Name="From" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="100" />
+    <Property Name="Port" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="EmailTemplateId" />
+    </Key>
+    <Property Name="EmailTemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailTemplateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailTemplateSubject" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailTemplateDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SBMDB.dbo.GasCompany' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GasCompany">
+    <Key>
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="UpdatedDate" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="GasCompanyId" Type="int" />
+    <Property Name="GasCompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HouseType">
+    <Key>
+      <PropertyRef Name="HouseTypeId" />
+    </Key>
+    <Property Name="HouseTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HouseTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IdProofType">
+    <Key>
+      <PropertyRef Name="IdProofTypeId" />
+    </Key>
+    <Property Name="IdProofTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProofTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvertType">
+    <Key>
+      <PropertyRef Name="InvertTypeId" />
+    </Key>
+    <Property Name="InvertTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvertTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginDetails">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="LastLoginUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginUpdatedTime" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberType">
+    <Key>
+      <PropertyRef Name="MembetTypeId" />
+    </Key>
+    <Property Name="MembetTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembetTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModuleTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentMode">
+    <Key>
+      <PropertyRef Name="PaymentModeId" />
+    </Key>
+    <Property Name="PaymentModeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentModeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="PaymentTypeId" />
+    </Key>
+    <Property Name="PaymentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PensionType">
+    <Key>
+      <PropertyRef Name="PensionTypeId" />
+    </Key>
+    <Property Name="PensionTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PensionTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Relationship">
+    <Key>
+      <PropertyRef Name="RelationshipId" />
+    </Key>
+    <Property Name="RelationshipId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationshipName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Religion">
+    <Key>
+      <PropertyRef Name="ReligionId" />
+    </Key>
+    <Property Name="ReligionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReligionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReligiousFundType">
+    <Key>
+      <PropertyRef Name="ReligiousFundTypeId" />
+    </Key>
+    <Property Name="ReligiousFundTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReligiousFundTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResidentType">
+    <Key>
+      <PropertyRef Name="ResidentTypeId" />
+    </Key>
+    <Property Name="ResidentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResidentTpyeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoleAssignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="ModuleId" Type="int" />
+    <Property Name="IsAdd" Type="bit" Nullable="false" />
+    <Property Name="IsEdit" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+    <Property Name="IsView" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="SchoolClassLevel">
+    <Key>
+      <PropertyRef Name="SchoolClassLevelId" />
+    </Key>
+    <Property Name="SchoolClassLevelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchoolClassLevelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SchoolType">
+    <Key>
+      <PropertyRef Name="SchoolTypeId" />
+    </Key>
+    <Property Name="SchoolTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchoolTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMSSettings">
+    <Key>
+      <PropertyRef Name="SMSSettingsId" />
+    </Key>
+    <Property Name="SMSSettingsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MailServer" Type="nvarchar" MaxLength="50" />
+    <Property Name="From" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="100" />
+    <Property Name="Port" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMSTemplate">
+    <Key>
+      <PropertyRef Name="SMSTemplateId" />
+    </Key>
+    <Property Name="SMSTemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SMSTemplateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SMSTemplateSubject" Type="nvarchar" MaxLength="50" />
+    <Property Name="SMSTemplateDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SurveyAreaCode">
+    <Key>
+      <PropertyRef Name="SurveyAreaCodeId" />
+    </Key>
+    <Property Name="SurveyAreaCodeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyAreaCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SurveyAreaNam" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SurveyConclusionCategory">
+    <Key>
+      <PropertyRef Name="SurveyConclusionCategoryId" />
+    </Key>
+    <Property Name="SurveyConclusionCategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyConclusionCategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SurveyConcusionQuestion">
+    <Key>
+      <PropertyRef Name="SurveyConcusionQuestionId" />
+    </Key>
+    <Property Name="SurveyConcusionQuestionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyConcusionQuestionName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Option1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Option2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Option3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Option4" Type="nvarchar" MaxLength="500" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SurveyStatus">
+    <Key>
+      <PropertyRef Name="SurveyStatusId" />
+    </Key>
+    <Property Name="SurveyStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyStatusName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SurveyType">
+    <Key>
+      <PropertyRef Name="SurveyTypeId" />
+    </Key>
+    <Property Name="SurveyTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ToiletType">
+    <Key>
+      <PropertyRef Name="ToitelTypeId" />
+    </Key>
+    <Property Name="ToitelTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToiletTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrustType">
+    <Key>
+      <PropertyRef Name="TrustTypeId" />
+    </Key>
+    <Property Name="TrustTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TrustTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UniversityType">
+    <Key>
+      <PropertyRef Name="UniversityTypeId" />
+    </Key>
+    <Property Name="UniversityTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UniversityTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WaterConnection">
+    <Key>
+      <PropertyRef Name="WaterConnectionId" />
+    </Key>
+    <Property Name="WaterConnectionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WaterConnectionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkType">
+    <Key>
+      <PropertyRef Name="WorkTypeId" />
+    </Key>
+    <Property Name="WorkTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Administrator_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Administrator1" Type="Self.Administrator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Administrator1">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Administrator_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Administrator1" Type="Self.Administrator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Administrator1">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicationType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ApplicationType" Type="Self.ApplicationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ApplicationType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicationType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ApplicationType" Type="Self.ApplicationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ApplicationType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankBranch_BranchLocation">
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="0..1" />
+    <End Role="BankBranch" Type="Self.BankBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BranchLocation">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="BankBranch">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiayAidStatus_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BeneficiayAidStatus" Type="Self.BeneficiayAidStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BeneficiayAidStatus">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeneficiayAidStatus_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BeneficiayAidStatus" Type="Self.BeneficiayAidStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BeneficiayAidStatus">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BranchLocation_TrustType">
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="0..1" />
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrustType">
+        <PropertyRef Name="TrustTypeId" />
+      </Principal>
+      <Dependent Role="BranchLocation">
+        <PropertyRef Name="BranchTrustTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharitableFundType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CharitableFundType" Type="Self.CharitableFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CharitableFundType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharitableFundType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CharitableFundType" Type="Self.CharitableFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CharitableFundType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country1">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeDegreeLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeDegreeLevel" Type="Self.CollegeDegreeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeDegreeLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeDegreeLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeDegreeLevel" Type="Self.CollegeDegreeLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeDegreeLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeType" Type="Self.CollegeType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CollegeType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="CollegeType" Type="Self.CollegeType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="CollegeType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Country" Type="Self.Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Country">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Country_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Country" Type="Self.Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Country">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistitutionType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="DistitutionType" Type="Self.DistitutionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="DistitutionType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistitutionType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="DistitutionType" Type="Self.DistitutionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="DistitutionType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationLevel" Type="Self.EducationLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationLevel" Type="Self.EducationLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationType" Type="Self.EducationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EducationType" Type="Self.EducationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EducationType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailSettings_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailSettings" Type="Self.EmailSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailSettings">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailSettings_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailSettings" Type="Self.EmailSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailSettings">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailTemplate_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailTemplate" Type="Self.EmailTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailTemplate">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmailTemplate_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="EmailTemplate" Type="Self.EmailTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="EmailTemplate">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_BranchLocation">
+    <End Role="BranchLocation" Type="Self.BranchLocation" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BranchLocation">
+        <PropertyRef Name="BranchId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasCompany_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="GasCompany" Type="Self.GasCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="GasCompany">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasCompany_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="GasCompany" Type="Self.GasCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="GasCompany">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gender_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Gender" Type="Self.Gender" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Gender">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gender_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Gender" Type="Self.Gender" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Gender">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="HouseType" Type="Self.HouseType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="HouseType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HouseType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="HouseType" Type="Self.HouseType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="HouseType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdProofType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="IdProofType" Type="Self.IdProofType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="IdProofType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdProofType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="IdProofType" Type="Self.IdProofType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="IdProofType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvertType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="InvertType" Type="Self.InvertType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="InvertType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvertType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="InvertType" Type="Self.InvertType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="InvertType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginDetails_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="LoginDetails" Type="Self.LoginDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="LoginDetails">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginDetails_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="LoginDetails" Type="Self.LoginDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="LoginDetails">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="MemberType" Type="Self.MemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="MemberType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="MemberType" Type="Self.MemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="MemberType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Module_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Module_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentMode_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentMode" Type="Self.PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentMode_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentMode" Type="Self.PaymentMode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentMode">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PaymentType" Type="Self.PaymentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PaymentType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PensionType_Administrator2">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PensionType" Type="Self.PensionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PensionType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PensionType_Administrator3">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="PensionType" Type="Self.PensionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="PensionType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relationship_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Relationship" Type="Self.Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Relationship">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relationship_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Relationship" Type="Self.Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Relationship">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Religion_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Religion" Type="Self.Religion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Religion">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Religion_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Religion" Type="Self.Religion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Religion">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReligiousFundType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ReligiousFundType" Type="Self.ReligiousFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ReligiousFundType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReligiousFundType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ReligiousFundType" Type="Self.ReligiousFundType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ReligiousFundType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResidentType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ResidentType" Type="Self.ResidentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ResidentType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResidentType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ResidentType" Type="Self.ResidentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ResidentType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Role" Type="Self.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="Role" Type="Self.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Module">
+    <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleAssignment_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="RoleAssignment" Type="Self.RoleAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RoleAssignment">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolClassLevel_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolClassLevel" Type="Self.SchoolClassLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolClassLevel">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolClassLevel_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolClassLevel" Type="Self.SchoolClassLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolClassLevel">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolType" Type="Self.SchoolType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SchoolType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SchoolType" Type="Self.SchoolType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SchoolType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSSettings_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSSettings" Type="Self.SMSSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSSettings">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSSettings_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSSettings" Type="Self.SMSSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSSettings">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSTemplate_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSTemplate" Type="Self.SMSTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSTemplate">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSTemplate_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SMSTemplate" Type="Self.SMSTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SMSTemplate">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyAreaCode_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyAreaCode" Type="Self.SurveyAreaCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyAreaCode">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyAreaCode_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyAreaCode" Type="Self.SurveyAreaCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyAreaCode">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConclusionCategory_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConclusionCategory" Type="Self.SurveyConclusionCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConclusionCategory">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConclusionCategory_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConclusionCategory" Type="Self.SurveyConclusionCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConclusionCategory">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConcusionQuestion_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConcusionQuestion" Type="Self.SurveyConcusionQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConcusionQuestion">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyConcusionQuestion_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyConcusionQuestion" Type="Self.SurveyConcusionQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyConcusionQuestion">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyStatus_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyStatus" Type="Self.SurveyStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyStatus">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyStatus_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyStatus" Type="Self.SurveyStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyStatus">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyType" Type="Self.SurveyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SurveyType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="SurveyType" Type="Self.SurveyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="SurveyType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToiletType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ToiletType" Type="Self.ToiletType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ToiletType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ToiletType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="ToiletType" Type="Self.ToiletType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="ToiletType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrustType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="TrustType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrustType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="TrustType" Type="Self.TrustType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="TrustType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="UniversityType" Type="Self.UniversityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="UniversityType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="UniversityType" Type="Self.UniversityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="UniversityType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterConnection_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WaterConnection" Type="Self.WaterConnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WaterConnection">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterConnection_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WaterConnection" Type="Self.WaterConnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WaterConnection">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkType_Administrator">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WorkType" Type="Self.WorkType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WorkType">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkType_Administrator1">
+    <End Role="Administrator" Type="Self.Administrator" Multiplicity="0..1" />
+    <End Role="WorkType" Type="Self.WorkType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Administrator">
+        <PropertyRef Name="AdminId" />
+      </Principal>
+      <Dependent Role="WorkType">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SBMDBModelStoreContainer">
+    <EntitySet Name="Administrator" EntityType="Self.Administrator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicationType" EntityType="Self.ApplicationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BankBranch" EntityType="Self.BankBranch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BeneficiayAidStatus" EntityType="Self.BeneficiayAidStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BranchLocation" EntityType="Self.BranchLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CharitableFundType" EntityType="Self.CharitableFundType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CollegeType" EntityType="Self.CollegeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DistitutionType" EntityType="Self.DistitutionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EducationLevel" EntityType="Self.EducationLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EducationType" EntityType="Self.EducationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailSettings" EntityType="Self.EmailSettings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HouseType" EntityType="Self.HouseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdProofType" EntityType="Self.IdProofType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvertType" EntityType="Self.InvertType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginDetails" EntityType="Self.LoginDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberType" EntityType="Self.MemberType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMode" EntityType="Self.PaymentMode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentType" EntityType="Self.PaymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PensionType" EntityType="Self.PensionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Relationship" EntityType="Self.Relationship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Religion" EntityType="Self.Religion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReligiousFundType" EntityType="Self.ReligiousFundType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResidentType" EntityType="Self.ResidentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleAssignment" EntityType="Self.RoleAssignment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolClassLevel" EntityType="Self.SchoolClassLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchoolType" EntityType="Self.SchoolType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSSettings" EntityType="Self.SMSSettings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSTemplate" EntityType="Self.SMSTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyAreaCode" EntityType="Self.SurveyAreaCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyConclusionCategory" EntityType="Self.SurveyConclusionCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyConcusionQuestion" EntityType="Self.SurveyConcusionQuestion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyStatus" EntityType="Self.SurveyStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyType" EntityType="Self.SurveyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ToiletType" EntityType="Self.ToiletType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrustType" EntityType="Self.TrustType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UniversityType" EntityType="Self.UniversityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WaterConnection" EntityType="Self.WaterConnection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkType" EntityType="Self.WorkType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CollegeDegreeLevel" EntityType="Self.CollegeDegreeLevel" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CollegeDegreeLevel].[CollegeDegreeLevelId] AS [CollegeDegreeLevelId], 
+    [CollegeDegreeLevel].[CollegeDegreeLevelName] AS [CollegeDegreeLevelName], 
+    [CollegeDegreeLevel].[CreatedDate] AS [CreatedDate], 
+    [CollegeDegreeLevel].[CreatedBy] AS [CreatedBy], 
+    [CollegeDegreeLevel].[UpdatedDate] AS [UpdatedDate], 
+    [CollegeDegreeLevel].[UpdatedBy] AS [UpdatedBy], 
+    [CollegeDegreeLevel].[IsActive] AS [IsActive]
+    FROM [dbo].[CollegeDegreeLevel] AS [CollegeDegreeLevel]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GasCompany" EntityType="Self.GasCompany" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GasCompany].[GasCompanyId] AS [GasCompanyId], 
+    [GasCompany].[GasCompanyName] AS [GasCompanyName], 
+    [GasCompany].[CreatedDate] AS [CreatedDate], 
+    [GasCompany].[CreatedBy] AS [CreatedBy], 
+    [GasCompany].[UpdatedDate] AS [UpdatedDate], 
+    [GasCompany].[UpdatedBy] AS [UpdatedBy], 
+    [GasCompany].[IsActive] AS [IsActive]
+    FROM [dbo].[GasCompany] AS [GasCompany]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Administrator_Administrator" Association="Self.FK_Administrator_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Administrator1" EntitySet="Administrator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Administrator_Administrator1" Association="Self.FK_Administrator_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Administrator1" EntitySet="Administrator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicationType_Administrator" Association="Self.FK_ApplicationType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ApplicationType" EntitySet="ApplicationType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicationType_Administrator1" Association="Self.FK_ApplicationType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ApplicationType" EntitySet="ApplicationType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_Administrator" Association="Self.FK_BankBranch_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BankBranch" EntitySet="BankBranch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_Administrator1" Association="Self.FK_BankBranch_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BankBranch" EntitySet="BankBranch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankBranch_BranchLocation" Association="Self.FK_BankBranch_BranchLocation">
+      <End Role="BranchLocation" EntitySet="BranchLocation" />
+      <End Role="BankBranch" EntitySet="BankBranch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiayAidStatus_Administrator" Association="Self.FK_BeneficiayAidStatus_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BeneficiayAidStatus" EntitySet="BeneficiayAidStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeneficiayAidStatus_Administrator1" Association="Self.FK_BeneficiayAidStatus_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BeneficiayAidStatus" EntitySet="BeneficiayAidStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_Administrator" Association="Self.FK_BranchLocation_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BranchLocation" EntitySet="BranchLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_Administrator1" Association="Self.FK_BranchLocation_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="BranchLocation" EntitySet="BranchLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BranchLocation_TrustType" Association="Self.FK_BranchLocation_TrustType">
+      <End Role="TrustType" EntitySet="TrustType" />
+      <End Role="BranchLocation" EntitySet="BranchLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharitableFundType_Administrator" Association="Self.FK_CharitableFundType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CharitableFundType" EntitySet="CharitableFundType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharitableFundType_Administrator1" Association="Self.FK_CharitableFundType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CharitableFundType" EntitySet="CharitableFundType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Administrator" Association="Self.FK_City_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Administrator1" Association="Self.FK_City_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country" Association="Self.FK_City_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country1" Association="Self.FK_City_Country1">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeDegreeLevel_Administrator" Association="Self.FK_CollegeDegreeLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CollegeDegreeLevel" EntitySet="CollegeDegreeLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeDegreeLevel_Administrator1" Association="Self.FK_CollegeDegreeLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CollegeDegreeLevel" EntitySet="CollegeDegreeLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeType_Administrator" Association="Self.FK_CollegeType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CollegeType" EntitySet="CollegeType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CollegeType_Administrator1" Association="Self.FK_CollegeType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="CollegeType" EntitySet="CollegeType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_Administrator" Association="Self.FK_Country_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Country" EntitySet="Country" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Country_Administrator1" Association="Self.FK_Country_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Country" EntitySet="Country" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistitutionType_Administrator" Association="Self.FK_DistitutionType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="DistitutionType" EntitySet="DistitutionType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistitutionType_Administrator1" Association="Self.FK_DistitutionType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="DistitutionType" EntitySet="DistitutionType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationLevel_Administrator" Association="Self.FK_EducationLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EducationLevel" EntitySet="EducationLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationLevel_Administrator1" Association="Self.FK_EducationLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EducationLevel" EntitySet="EducationLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationType_Administrator" Association="Self.FK_EducationType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EducationType" EntitySet="EducationType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationType_Administrator1" Association="Self.FK_EducationType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EducationType" EntitySet="EducationType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailSettings_Administrator" Association="Self.FK_EmailSettings_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EmailSettings" EntitySet="EmailSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailSettings_Administrator1" Association="Self.FK_EmailSettings_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EmailSettings" EntitySet="EmailSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailTemplate_Administrator" Association="Self.FK_EmailTemplate_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EmailTemplate" EntitySet="EmailTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmailTemplate_Administrator1" Association="Self.FK_EmailTemplate_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="EmailTemplate" EntitySet="EmailTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Administrator" Association="Self.FK_Employee_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Administrator1" Association="Self.FK_Employee_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_BranchLocation" Association="Self.FK_Employee_BranchLocation">
+      <End Role="BranchLocation" EntitySet="BranchLocation" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasCompany_Administrator" Association="Self.FK_GasCompany_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="GasCompany" EntitySet="GasCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasCompany_Administrator1" Association="Self.FK_GasCompany_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="GasCompany" EntitySet="GasCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gender_Administrator" Association="Self.FK_Gender_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Gender" EntitySet="Gender" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gender_Administrator1" Association="Self.FK_Gender_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Gender" EntitySet="Gender" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseType_Administrator" Association="Self.FK_HouseType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="HouseType" EntitySet="HouseType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HouseType_Administrator1" Association="Self.FK_HouseType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="HouseType" EntitySet="HouseType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdProofType_Administrator" Association="Self.FK_IdProofType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="IdProofType" EntitySet="IdProofType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdProofType_Administrator1" Association="Self.FK_IdProofType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="IdProofType" EntitySet="IdProofType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvertType_Administrator" Association="Self.FK_InvertType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="InvertType" EntitySet="InvertType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvertType_Administrator1" Association="Self.FK_InvertType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="InvertType" EntitySet="InvertType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginDetails_Administrator" Association="Self.FK_LoginDetails_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="LoginDetails" EntitySet="LoginDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginDetails_Administrator1" Association="Self.FK_LoginDetails_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="LoginDetails" EntitySet="LoginDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberType_Administrator" Association="Self.FK_MemberType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="MemberType" EntitySet="MemberType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberType_Administrator1" Association="Self.FK_MemberType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="MemberType" EntitySet="MemberType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Module_Administrator" Association="Self.FK_Module_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Module" EntitySet="Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Module_Administrator1" Association="Self.FK_Module_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Module" EntitySet="Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentMode_Administrator" Association="Self.FK_PaymentMode_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PaymentMode" EntitySet="PaymentMode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentMode_Administrator1" Association="Self.FK_PaymentMode_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PaymentMode" EntitySet="PaymentMode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentType_Administrator" Association="Self.FK_PaymentType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PaymentType" EntitySet="PaymentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentType_Administrator1" Association="Self.FK_PaymentType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PaymentType" EntitySet="PaymentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PensionType_Administrator2" Association="Self.FK_PensionType_Administrator2">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PensionType" EntitySet="PensionType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PensionType_Administrator3" Association="Self.FK_PensionType_Administrator3">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="PensionType" EntitySet="PensionType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relationship_Administrator" Association="Self.FK_Relationship_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Relationship" EntitySet="Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relationship_Administrator1" Association="Self.FK_Relationship_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Relationship" EntitySet="Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Religion_Administrator" Association="Self.FK_Religion_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Religion" EntitySet="Religion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Religion_Administrator1" Association="Self.FK_Religion_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Religion" EntitySet="Religion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReligiousFundType_Administrator" Association="Self.FK_ReligiousFundType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ReligiousFundType" EntitySet="ReligiousFundType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReligiousFundType_Administrator1" Association="Self.FK_ReligiousFundType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ReligiousFundType" EntitySet="ReligiousFundType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResidentType_Administrator" Association="Self.FK_ResidentType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ResidentType" EntitySet="ResidentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResidentType_Administrator1" Association="Self.FK_ResidentType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ResidentType" EntitySet="ResidentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Administrator" Association="Self.FK_Role_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Role" EntitySet="Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_Administrator1" Association="Self.FK_Role_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="Role" EntitySet="Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Administrator" Association="Self.FK_RoleAssignment_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Administrator1" Association="Self.FK_RoleAssignment_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Module" Association="Self.FK_RoleAssignment_Module">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleAssignment_Role" Association="Self.FK_RoleAssignment_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RoleAssignment" EntitySet="RoleAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolClassLevel_Administrator" Association="Self.FK_SchoolClassLevel_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SchoolClassLevel" EntitySet="SchoolClassLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolClassLevel_Administrator1" Association="Self.FK_SchoolClassLevel_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SchoolClassLevel" EntitySet="SchoolClassLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolType_Administrator" Association="Self.FK_SchoolType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SchoolType" EntitySet="SchoolType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SchoolType_Administrator1" Association="Self.FK_SchoolType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SchoolType" EntitySet="SchoolType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSSettings_Administrator" Association="Self.FK_SMSSettings_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SMSSettings" EntitySet="SMSSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSSettings_Administrator1" Association="Self.FK_SMSSettings_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SMSSettings" EntitySet="SMSSettings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSTemplate_Administrator" Association="Self.FK_SMSTemplate_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SMSTemplate" EntitySet="SMSTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSTemplate_Administrator1" Association="Self.FK_SMSTemplate_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SMSTemplate" EntitySet="SMSTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Administrator" Association="Self.FK_State_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Administrator1" Association="Self.FK_State_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyAreaCode_Administrator" Association="Self.FK_SurveyAreaCode_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyAreaCode" EntitySet="SurveyAreaCode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyAreaCode_Administrator1" Association="Self.FK_SurveyAreaCode_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyAreaCode" EntitySet="SurveyAreaCode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConclusionCategory_Administrator" Association="Self.FK_SurveyConclusionCategory_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyConclusionCategory" EntitySet="SurveyConclusionCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConclusionCategory_Administrator1" Association="Self.FK_SurveyConclusionCategory_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyConclusionCategory" EntitySet="SurveyConclusionCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConcusionQuestion_Administrator" Association="Self.FK_SurveyConcusionQuestion_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyConcusionQuestion" EntitySet="SurveyConcusionQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyConcusionQuestion_Administrator1" Association="Self.FK_SurveyConcusionQuestion_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyConcusionQuestion" EntitySet="SurveyConcusionQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyStatus_Administrator" Association="Self.FK_SurveyStatus_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyStatus" EntitySet="SurveyStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyStatus_Administrator1" Association="Self.FK_SurveyStatus_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyStatus" EntitySet="SurveyStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyType_Administrator" Association="Self.FK_SurveyType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyType" EntitySet="SurveyType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SurveyType_Administrator1" Association="Self.FK_SurveyType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="SurveyType" EntitySet="SurveyType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToiletType_Administrator" Association="Self.FK_ToiletType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ToiletType" EntitySet="ToiletType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ToiletType_Administrator1" Association="Self.FK_ToiletType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="ToiletType" EntitySet="ToiletType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrustType_Administrator" Association="Self.FK_TrustType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="TrustType" EntitySet="TrustType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrustType_Administrator1" Association="Self.FK_TrustType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="TrustType" EntitySet="TrustType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityType_Administrator" Association="Self.FK_UniversityType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="UniversityType" EntitySet="UniversityType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityType_Administrator1" Association="Self.FK_UniversityType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="UniversityType" EntitySet="UniversityType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterConnection_Administrator" Association="Self.FK_WaterConnection_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="WaterConnection" EntitySet="WaterConnection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterConnection_Administrator1" Association="Self.FK_WaterConnection_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="WaterConnection" EntitySet="WaterConnection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkType_Administrator" Association="Self.FK_WorkType_Administrator">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="WorkType" EntitySet="WorkType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkType_Administrator1" Association="Self.FK_WorkType_Administrator1">
+      <End Role="Administrator" EntitySet="Administrator" />
+      <End Role="WorkType" EntitySet="WorkType" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

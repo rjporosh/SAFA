@@ -9,7 +9,7 @@ using System.Threading;
 using SAFA.Auth;
 using System.Security.Principal;
 
-namespace DealerManagementSoftware.Repository.BaseRepo
+namespace SAFA.Repository.BaseRepo
 {
     public class Repository<T> : IRepository<T>
         where T : class
@@ -18,13 +18,14 @@ namespace DealerManagementSoftware.Repository.BaseRepo
        public SBMDBEntities db = new SBMDBEntities();
         public int Add(T entity)
         {
-            //var addBy = entity.GetType().GetProperty("AddedBy");
-            //var addDate = entity.GetType().GetProperty("AddedDate");
-            //var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            //string[] current = (identity.Identity.Name).Split('&');
-
-            //addBy.SetValue(entity, current[0], null);
-            //addDate.SetValue(entity, DateTime.Now, null);
+            var CreatedBy = entity.GetType().GetProperty("CreatedBy");
+            var CreatedDate = entity.GetType().GetProperty("CreatedDate");
+            var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            // string[] current = (identity.Identity.Name).Split('&');
+            ////string[] current = (identity.Identity.Name).Split('&');
+            ////Convert.ToInt32(current);
+            //CreatedBy.SetValue(entity, current[0],null);
+            CreatedDate.SetValue(entity, DateTime.Now, null);
             db.Set<T>().Add(entity);
 
            return db.SaveChanges();
@@ -55,8 +56,8 @@ namespace DealerManagementSoftware.Repository.BaseRepo
             db.Entry(entity).State = EntityState.Modified;
           
           
-            db.Entry(entity).Property("AddedBy").IsModified = false;
-            db.Entry(entity).Property("AddedDate").IsModified = false;
+            db.Entry(entity).Property("CreatedBy").IsModified = false;
+            db.Entry(entity).Property("CreatedDate").IsModified = false;
 
             var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
             string[] current = (identity.Identity.Name).Split('&');
